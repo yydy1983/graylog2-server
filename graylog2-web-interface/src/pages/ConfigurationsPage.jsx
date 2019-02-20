@@ -12,6 +12,7 @@ import ActionsProvider from 'injection/ActionsProvider';
 import SearchesConfig from 'components/configurations/SearchesConfig';
 import MessageProcessorsConfig from 'components/configurations/MessageProcessorsConfig';
 import SidecarConfig from 'components/configurations/SidecarConfig';
+import CustomizationConfig from 'components/configurations/CustomizationConfig';
 
 import {} from 'components/maps/configurations';
 
@@ -31,6 +32,7 @@ const ConfigurationsPage = createReactClass({
   componentDidMount() {
     this.style.use();
     ConfigurationActions.list(this.SEARCHES_CLUSTER_CONFIG);
+    ConfigurationActions.list(this.CUSTOMIZATION_CONFIG);
     ConfigurationActions.listMessageProcessorsConfig(this.MESSAGE_PROCESSORS_CONFIG);
     ConfigurationActions.list(this.SIDECAR_CONFIG);
 
@@ -47,6 +49,7 @@ const ConfigurationsPage = createReactClass({
   SEARCHES_CLUSTER_CONFIG: 'org.graylog2.indexer.searches.SearchesClusterConfig',
   MESSAGE_PROCESSORS_CONFIG: 'org.graylog2.messageprocessors.MessageProcessorsConfig',
   SIDECAR_CONFIG: 'org.graylog.plugins.sidecar.system.SidecarConfiguration',
+  CUSTOMIZATION_CONFIG: 'org.graylog2.configuration.Customization',
 
   _getConfig(configType) {
     if (this.state.configuration && this.state.configuration[configType]) {
@@ -103,9 +106,11 @@ const ConfigurationsPage = createReactClass({
     const searchesConfig = this._getConfig(this.SEARCHES_CLUSTER_CONFIG);
     const messageProcessorsConfig = this._getConfig(this.MESSAGE_PROCESSORS_CONFIG);
     const sidecarConfig = this._getConfig(this.SIDECAR_CONFIG);
+    const customizationConfig = this._getConfig(this.CUSTOMIZATION_CONFIG);
     let searchesConfigComponent;
     let messageProcessorsConfigComponent;
     let sidecarConfigComponent;
+    let customizationComponent;
     if (searchesConfig) {
       searchesConfigComponent = (
         <SearchesConfig config={searchesConfig}
@@ -131,6 +136,15 @@ const ConfigurationsPage = createReactClass({
       sidecarConfigComponent = (<Spinner />);
     }
 
+    if (customizationConfig) {
+      customizationComponent = (
+        <CustomizationConfig config={customizationConfig}
+                             updateConfig={this._onUpdate(this.CUSTOMIZATION_CONFIG)} />
+      );
+    } else {
+      customizationComponent = (<Spinner />);
+    }
+
     const pluginConfigRows = this._pluginConfigRows();
 
     return (
@@ -151,6 +165,9 @@ const ConfigurationsPage = createReactClass({
             </Col>
             <Col md={6}>
               {sidecarConfigComponent}
+            </Col>
+            <Col md={6}>
+              {customizationComponent}
             </Col>
           </Row>
 

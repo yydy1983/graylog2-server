@@ -12,7 +12,6 @@ import PermissionsMixin from 'util/PermissionsMixin';
 
 import Routes from 'routing/Routes';
 import URLUtils from 'util/URLUtils';
-import AppConfig from 'util/AppConfig';
 
 import { PluginStore } from 'graylog-web-plugin/plugin';
 
@@ -20,11 +19,11 @@ import GlobalThroughput from 'components/throughput/GlobalThroughput';
 import UserMenu from 'components/navigation/UserMenu';
 import HelpMenu from 'components/navigation/HelpMenu';
 import { IfPermitted } from 'components/common';
-import badgeStyles from 'components/bootstrap/Badge.css';
 
 import NavigationBrand from './NavigationBrand';
 import NotificationBadge from './NotificationBadge';
 import NavigationLink from './NavigationLink';
+import HeaderBadge from './HeaderBadge';
 import SystemMenu from './SystemMenu';
 import styles from './Navigation.css';
 import InactiveNavItem from './InactiveNavItem';
@@ -66,6 +65,8 @@ const Navigation = ({ permissions, fullName, location, loginName }) => {
     .sort((route1, route2) => naturalSort(route1.description.toLowerCase(), route2.description.toLowerCase()))
     .map(pluginRoute => formatPluginRoute(pluginRoute, permissions, location));
 
+  const headerBadge = <HeaderBadge />;
+
   return (
     <Navbar inverse fluid fixedTop>
       <Navbar.Header>
@@ -76,10 +77,7 @@ const Navigation = ({ permissions, fullName, location, loginName }) => {
         </Navbar.Brand>
         <Navbar.Toggle />
 
-        {
-        AppConfig.gl2DevMode()
-          && <Badge className={`dev-badge ${badgeStyles.badgeDanger}`}>DEV</Badge>
-        }
+        <HeaderBadge />
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav navbar>
@@ -125,10 +123,10 @@ const Navigation = ({ permissions, fullName, location, loginName }) => {
 
         <Nav navbar pullRight className={styles['header-meta-nav']}>
           {
-          AppConfig.gl2DevMode()
+            headerBadge
             && (
               <InactiveNavItem className={styles['dev-badge-wrap']}>
-                <Badge className={`dev-badge ${badgeStyles.badgeDanger}`}>DEV</Badge>
+                {headerBadge}
               </InactiveNavItem>
             )
           }
