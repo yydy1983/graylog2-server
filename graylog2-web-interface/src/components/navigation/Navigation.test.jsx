@@ -13,6 +13,8 @@ jest.mock('components/navigation/NotificationBadge', () => mockComponent('Notifi
 
 const findLink = (wrapper, title) => wrapper.find(`NavigationLink[description="${title}"]`);
 
+jest.mock('./HeaderBadge', () => () => <span />);
+
 describe('Navigation', () => {
   let currentUser;
   let Navigation;
@@ -23,10 +25,12 @@ describe('Navigation', () => {
       listen: jest.fn(),
       get: jest.fn(),
     };
+
     jest.doMock('injection/StoreProvider', () => ({ getStore: () => CurrentUserStore }));
     // eslint-disable-next-line global-require
     Navigation = require('./Navigation');
   });
+
   describe('has common elements', () => {
     let wrapper;
     beforeEach(() => {
