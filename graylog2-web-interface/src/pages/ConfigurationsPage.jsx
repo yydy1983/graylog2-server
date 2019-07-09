@@ -1,7 +1,7 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
-import { Row, Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { DocumentTitle, PageHeader, Spinner } from 'components/common';
 import { PluginStore } from 'graylog-web-plugin/plugin';
 import StoreProvider from 'injection/StoreProvider';
@@ -11,7 +11,6 @@ import SearchesConfig from 'components/configurations/SearchesConfig';
 import MessageProcessorsConfig from 'components/configurations/MessageProcessorsConfig';
 import SidecarConfig from 'components/configurations/SidecarConfig';
 import CustomizationConfig from 'components/configurations/CustomizationConfig';
-import {} from 'components/maps/configurations';
 
 const ConfigurationsStore = StoreProvider.getStore('Configurations');
 const ConfigurationActions = ActionsProvider.getActions('Configuration');
@@ -50,8 +49,9 @@ const ConfigurationsPage = createReactClass({
   CUSTOMIZATION_CONFIG: 'org.graylog2.configuration.Customization',
 
   _getConfig(configType) {
-    if (this.state.configuration && this.state.configuration[configType]) {
-      return this.state.configuration[configType];
+    const { configuration } = this.state;
+    if (configuration && configuration[configType]) {
+      return configuration[configType];
     }
     return null;
   },
