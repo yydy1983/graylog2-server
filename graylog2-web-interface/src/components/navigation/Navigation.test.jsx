@@ -137,9 +137,9 @@ describe('Navigation', () => {
     };
     it.each`
     permissions                    | count | links
-    ${[]}                          | ${5}  | ${['Streams', 'Alerts', 'Dashboards']}
-    ${['searches:absolute', 'searches:relative', 'searches:keyword']} | ${6}  | ${['Search']}
-    ${['sources:read']}            | ${6}  | ${['Sources']}
+    ${[]}                          | ${6}  | ${['Streams', 'Alerts', 'Dashboards']}
+    ${['searches:absolute', 'searches:relative', 'searches:keyword']} | ${7}  | ${['Search']}
+    ${['sources:read']}            | ${7}  | ${['Sources']}
   `('shows $links for user with $permissions permissions', verifyPermissions);
   });
 });
