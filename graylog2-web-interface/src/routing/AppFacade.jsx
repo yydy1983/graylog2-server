@@ -5,7 +5,6 @@ import Reflux from 'reflux';
 import loadAsync from 'routing/loadAsync';
 
 import 'bootstrap/less/bootstrap.less';
-import 'opensans-npm-webfont';
 import 'stylesheets/bootstrap-submenus.less';
 import 'toastr/toastr.less';
 import 'rickshaw/rickshaw.css';
