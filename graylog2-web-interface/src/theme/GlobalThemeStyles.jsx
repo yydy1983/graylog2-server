@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 import { progressBarStyles } from 'components/graylog/ProgressBar.jsx';
 
-import fontStyles from './fonts';
+import './fonts/fontawesome.css';
+import './fonts/opensans.css';
 
 const GlobalThemeStyles = createGlobalStyle`
   ${progressBarStyles};
-  ${fontStyles};
 `;
 
 export default GlobalThemeStyles;
