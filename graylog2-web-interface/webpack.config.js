@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UniqueChunkIdPlugin = require('./webpack/UniqueChunkIdPlugin');
 
 const ROOT_PATH = path.resolve(__dirname);
@@ -78,9 +80,10 @@ const webpackConfig = {
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
+            loader: MiniCssExtractPlugin.loader,
             options: getCssLoaderOptions(),
           },
+          'css-loader',
         ],
       },
     ],
@@ -96,6 +99,7 @@ const webpackConfig = {
   resolveLoader: { modules: [path.join(ROOT_PATH, 'node_modules')], moduleExtensions: ['-loader'] },
   devtool: 'source-map',
   plugins: [
+    new MiniCssExtractPlugin(),
     new UniqueChunkIdPlugin(),
     new webpack.HashedModuleIdsPlugin({
       hashFunction: 'sha256',
@@ -178,7 +182,8 @@ if (TARGET === 'build') {
             reserved: ['$super', '$', 'exports', 'require'],
           },
         },
-      })],
+      }),
+      new OptimizeCSSAssetsPlugin({})],
     },
     plugins: [
       new webpack.DefinePlugin({

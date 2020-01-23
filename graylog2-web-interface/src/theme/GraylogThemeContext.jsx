@@ -16,13 +16,13 @@ function useTheme() {
 const GraylogThemeProvider = ({ children }) => {
   return (
     <ThemeColor.Provider value={defaultValues}>
-      <>
-        <GlobalThemeStyles />
-        {/* NOTE: mode can be `teinte` and will eventually need to come from User Preferences */}
-        <ThemeProvider theme={{ mode: 'teinte' }}>
+      {/* NOTE: mode can be `teinte` and will eventually need to come from User Preferences */}
+      <ThemeProvider theme={{ mode: 'teinte' }}>
+        <>
+          <GlobalThemeStyles />
           {children}
-        </ThemeProvider>
-      </>
+        </>
+      </ThemeProvider>
     </ThemeColor.Provider>
   );
 };
