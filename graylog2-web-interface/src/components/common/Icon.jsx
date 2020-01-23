@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import 'font-awesome/css/font-awesome.css';
-
 /**
  * Component that renders an icon or glyph.
  * Uses Font Awesome 4.7 : https://fontawesome.com/v4.7.0/icons/
