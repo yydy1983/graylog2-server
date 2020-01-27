@@ -3,6 +3,7 @@ import * as React from 'react';
 import { mount } from 'wrappedEnzyme';
 import * as Immutable from 'immutable';
 import { StoreMock as MockStore } from 'helpers/mocking';
+import asMock from 'helpers/mocking/AsMock';
 
 import { TIMESTAMP_FIELD, Messages } from 'views/Constants';
 import FieldTypeMapping from 'views/logic/fieldtypes/FieldTypeMapping';
@@ -48,7 +49,19 @@ jest.mock('views/stores/SearchConfigStore', () => ({
 jest.mock('views/stores/SearchStore', () => ({
   SearchStore: MockStore(
     'listen',
-    ['getInitialState', () => ({ result: { results: { somequery: { effectiveTimerange: { from: '2019-11-15T14:40:48.666Z', to: '2019-11-29T14:40:48.666Z', type: 'absolute' } } } } })],
+    ['getInitialState', () => ({
+      result: {
+        results: {
+          somequery: {
+            searchTypes: {
+              'search-type-id': {
+                effectiveTimerange: { from: '2019-11-15T14:40:48.666Z', to: '2019-11-29T14:40:48.666Z', type: 'absolute' },
+              },
+            },
+          },
+        },
+      },
+    })],
   ),
   SearchActions: {
     reexecuteSearchTypes: jest.fn().mockReturnValue(Promise.resolve({ result: { errors: [] } })),
@@ -65,7 +78,7 @@ jest.mock('views/components/messagelist');
 
 describe('MessageList', () => {
   const data = {
-    id: '6ec30961-2519-45f5-80b6-849e3deb1c32',
+    id: 'search-type-id',
     type: 'messages',
     messages: [
       {
@@ -79,7 +92,6 @@ describe('MessageList', () => {
       },
     ],
     total: 1,
-
   };
   beforeEach(() => {
     // eslint-disable-next-line import/namespace
@@ -176,6 +188,25 @@ describe('MessageList', () => {
                                        setLoadingState={() => {}} />);
     wrapper.find('[aria-label="Next"]').simulate('click');
     expect(RefreshActions.disable).toHaveBeenCalledTimes(1);
+  });
+
+  it('displays error description, when using pagination throws an error', async () => {
+    asMock(SearchActions.reexecuteSearchTypes).mockReturnValue(Promise.resolve({
+      result: { errors: [{ description: 'Error description' }] },
+    }));
+
+    const config = MessagesWidgetConfig.builder().fields([]).build();
+    const secondPageSize = 10;
+    const wrapper = mount(<MessageList editing
+                                       data={{ ...data, total: Messages.DEFAULT_LIMIT + secondPageSize }}
+                                       fields={Immutable.List([])}
+                                       config={config}
+                                       setLoadingState={() => {}} />);
+
+    await wrapper.find('[aria-label="Next"]').simulate('click');
+    wrapper.update();
+
+    expect(wrapper.find('ErrorWidget').text()).toContain('Error description');
   });
 
   it('calls render completion callback after first render', () => {
