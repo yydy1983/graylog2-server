@@ -6,21 +6,18 @@ import { Badge as BootstrapBadge } from 'react-bootstrap';
 import { util } from 'theme';
 import bsStyleThemeVariant from './variants/bsStyle';
 
-const badgeStyles = () => {
-  const cssBuilder = (hex) => {
-    const backgroundColor = hex;
-    const textColor = util.readableColor(backgroundColor);
+const cssBuilder = (backgroundColor) => {
+  const textColor = util.readableColor(backgroundColor);
 
-    return css`
-      background-color: ${backgroundColor};
-      color: ${textColor};
-    `;
-  };
-
-  return bsStyleThemeVariant(cssBuilder);
+  return css`
+    background-color: ${backgroundColor};
+    color: ${textColor};
+  `;
 };
 
-const StyledBadge = styled(BootstrapBadge)`${badgeStyles()}`;
+const StyledBadge = styled(BootstrapBadge)`
+  ${bsStyleThemeVariant(cssBuilder)}
+`;
 
 const Badge = forwardRef(({ ...props }, ref) => {
   return (
