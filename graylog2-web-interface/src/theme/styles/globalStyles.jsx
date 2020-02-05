@@ -162,6 +162,15 @@ const globalStyles = css`
     padding-left: 50px;
   }
 
+  #main-row {
+    margin-bottom: 0px;
+  }
+
+  #main-content-sidebar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   #main-content {
     margin-top: 10px;
     padding: 5px 25px;
@@ -182,6 +191,14 @@ const globalStyles = css`
     width: 40px;
   }
 
+<<<<<<< HEAD
+=======
+  .message-terms {
+    margin-right: 8px;
+    font-family: monospace;
+  }
+
+>>>>>>> 7f91beaf9f... modal styles
   .support-sources ul {
     margin-top: 5px;
   }
@@ -203,13 +220,98 @@ const globalStyles = css`
     margin-top: 5px;
   }
 
+<<<<<<< HEAD
+=======
+  .system-messages {
+    font-size: 12px;
+  }
+
+  .notification {
+    margin-top: 10px !important;
+  }
+
+  .notification i {
+    color: #000;
+  }
+
+  .notification-head {
+    margin-bottom: 5px;
+  }
+
+  .notification-timestamp {
+    margin-left: 3px;
+    font-size: 10px;
+  }
+
+  .notification-solutions {
+    margin-top: 10px;
+  }
+
+  .notification-solutions label {
+    font-size: 13px;
+  }
+
+  .notification form {
+    margin-bottom: 0px;
+  }
+
+  .notification-solutions h4 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 1px;
+  }
+
+  .notification-solutions .btn {
+    margin-top: 3px;
+    font-size: 12px;
+    padding: 3px 11px;
+  }
+
+  .change-message-processing {
+    position: relative;
+    top: -1px;
+  }
+
+  .es-cluster-status {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+>>>>>>> 7f91beaf9f... modal styles
   .rickshaw_graph .x_tick {
     position: relative;
     top: 38px;
   }
 
+<<<<<<< HEAD
   .selected-resolution {
     font-weight: bold;
+=======
+  .graph-resolution-selector {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .graph-resolution-selector li {
+    padding-right: 0;
+  }
+
+  .graph-resolution-selector a {
+    text-transform: capitalize;
+  }
+
+  .selected-resolution {
+    font-weight: bold;
+  }
+
+
+  .input-list h2 {
+    margin-bottom: 5px;
+  }
+
+  .input-list .alert {
+    margin-top: 10px;
+>>>>>>> 7f91beaf9f... modal styles
   }
 
   .input-new {
@@ -450,6 +552,53 @@ const globalStyles = css`
     color: #a0a0a0
   }
 
+<<<<<<< HEAD
+=======
+
+  .input-list .static-fields {
+    margin-top: 10px;
+    margin-left: 3px;
+  }
+
+  .input-list .static-fields ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .input-list .static-fields ul .remove-static-field {
+    margin-left: 5px;
+  }
+
+  .field-graph-container {
+    padding-bottom: 35px;
+  }
+
+  .field-graph-container .dropdown-menu a.selected {
+    font-weight: bold;
+  }
+
+  .field-graph-container .type-description {
+    color: #bbb;
+    font-size: 11px;
+  }
+
+  .field-graph-container .field-graph-components {
+    margin-top: 10px;
+    margin-right: 12px;
+  }
+
+  .field-graph-container .field-graph {
+    margin-left: 40px;
+    margin-bottom: 25px;
+  }
+
+  .field-graph-container .field-graph-y-axis {
+    float: left;
+    height: 200px;
+    width: 40px;
+  }
+
+>>>>>>> 7f91beaf9f... modal styles
   #field-graphs .spinner {
     margin-bottom: 10px;
     text-align: center;
@@ -1874,6 +2023,19 @@ const globalStyles = css`
     content: "×";
   }
 
+<<<<<<< HEAD
+=======
+  #react-gettingstarted {
+    margin-left: -19px;
+    margin-right: -19px;
+    margin-top: -4px;
+  }
+
+  #react-gettingstarted iframe {
+    height: 1000px;
+  }
+
+>>>>>>> 7f91beaf9f... modal styles
   .field-analyzer {
     margin-left: 0 !important;
     margin-top: 10px !important;
