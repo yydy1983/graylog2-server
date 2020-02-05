@@ -7,7 +7,7 @@ const globalStyles = css`
 
   body {
     background-color: #e3e3e3;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     overflow-x: hidden;
     margin-top: 50px;
@@ -61,23 +61,25 @@ const globalStyles = css`
   }
 
   /* Remove boostrap outline */
-  a:active, select:active, input[type="file"]:active, input[type="radio"]:active, input[type="checkbox"]:active, .btn:active {
+  a:active,
+  select:active,
+  input[type="file"]:active,
+  input[type="radio"]:active,
+  input[type="checkbox"]:active,
+  .btn:active {
     outline: none;
     outline-offset: 0;
   }
 
-  input.form-control, select.form-control, textarea.form-control {
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
     color: #666;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     &:hover {
       border-color: hsl(0,0%,70%)
     }
-  }
-
-  .input-group-addon.input-group-separator {
-    border-right-width: 0;
-    border-left-width: 0;
   }
 
   label {
@@ -89,25 +91,13 @@ const globalStyles = css`
     margin-left: 5px;
   }
 
+  .input-group-addon.input-group-separator {
+    border-right-width: 0;
+    border-left-width: 0;
+  }
+
   .btn:focus {
     background-position: 0;
-  }
-
-  .modal-title {
-    font-size: 21px;
-  }
-
-  .modal-dialog {
-    margin-top: 55px;
-  }
-
-  .modal .modal-backdrop {
-    z-index: 0;
-  }
-
-  .modal-backdrop {
-    height: 100000%;  /* yes, really. this fixes the backdrop being cut off when the page is scrolled. */
-    z-index: 1030;
   }
 
   .navbar-brand {
@@ -344,9 +334,6 @@ const globalStyles = css`
     font-weight: bold;
   }
 
-  .modal form {
-    margin-bottom: 0;
-  }
 
   .input-list h2 {
     margin-bottom: 5px;
@@ -2095,10 +2082,6 @@ const globalStyles = css`
 
   .threaddump {
     font-size: 11px;
-  }
-
-  .modal-body .form-group {
-    margin-bottom: 5px;
   }
 
   h2.extractor-title {

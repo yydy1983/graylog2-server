@@ -18,6 +18,28 @@ const Modal = styled(BootstrapModal)`
       border-top-color: ${teinte.secondary.tre};
     }
   }
+
+  .modal-title {
+    font-size: 21px;
+  }
+
+  .modal-dialog {
+    margin-top: 55px;
+  }
+
+  .modal-backdrop {
+    height: 100000%;  /* yes, really. this fixes the backdrop being cut off when the page is scrolled. */
+    z-index: 1030;
+  }
+
+  form {
+    margin-bottom: 0;
+  }
+
+  .modal-body .form-group {
+    margin-bottom: 5px;
+  }
+
 `;
 
 /** @component */
