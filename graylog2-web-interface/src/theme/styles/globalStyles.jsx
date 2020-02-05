@@ -429,6 +429,13 @@ const globalStyles = css`
     margin: 0 4px 0 0
   }
 
+<<<<<<< HEAD
+=======
+  .rickshaw_graph .detail .date {
+    color: #a0a0a0
+  }
+
+>>>>>>> 62db7f25bb... field-graph-container
   #field-graphs .spinner {
     margin-bottom: 10px;
     text-align: center;
