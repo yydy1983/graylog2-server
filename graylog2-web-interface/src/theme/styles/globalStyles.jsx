@@ -110,51 +110,44 @@ const globalStyles = css`
     background-color: #fff;
     border: 1px solid #D1D1D1;
     margin-bottom: 10px;
+
+    p.description-tooltips {
+      margin-top: 10px;
+    }
+
+    p.description {
+      margin-top: 3px;
+      color: #939393;
+    }
+
+    p.description-tooltips-small .fa-stack {
+      margin-right: 1px;
+      position: relative;
+      top: -1px;
+    }
   }
 
-  .content p.description {
-    margin-top: 3px;
-  }
 
   .content-head {
     padding-bottom: 0px;
+
+    p {
+      margin-top: 15px;
+    }
+
+    .actions-lg {
+      float: right;
+    }
+
+    .actions-sm {
+      padding-bottom: 15px;
+    }
+
+    .description-tooltips .fa-stack {
+      margin-right: 3px;
+    }
   }
 
-  .content p.description {
-    color: #939393;
-  }
-
-  .content-head p {
-    margin-top: 15px;
-  }
-
-  .content-head .actions-lg {
-    float: right;
-  }
-
-  .actions-lg .actions-container {
-    height: 60px;
-    margin-top: 10px;
-    padding-left: 50px;
-  }
-
-  .content-head .actions-sm {
-    padding-bottom: 15px;
-  }
-
-  .content-head .description-tooltips .fa-stack {
-    margin-right: 3px;
-  }
-
-  .content p.description-tooltips-small .fa-stack {
-    margin-right: 1px;
-    position: relative;
-    top: -1px;
-  }
-
-  .content p.description-tooltips {
-    margin-top: 10px;
-  }
 
   .content-col {
     padding: 15px 10px;
@@ -163,29 +156,15 @@ const globalStyles = css`
     margin-top: 15px;
   }
 
-  #main-row {
-    margin-bottom: 0px;
-  }
-
-  #main-content-sidebar {
-    padding-left: 0;
-    padding-right: 0;
+  .actions-lg .actions-container {
+    height: 60px;
+    margin-top: 10px;
+    padding-left: 50px;
   }
 
   #main-content {
     margin-top: 10px;
     padding: 5px 25px;
-  }
-
-  /* // This is rendered inside a #main-content, and we need to compensate the margin-top to make it look nicer */
-  #main-content-search {
-    margin-bottom: 0;
-    margin-top: -15px;
-  }
-
-  a.fields-set-chooser {
-    margin-right: 2px;
-    margin-left: 2px;
   }
 
   #result-graph {
@@ -203,36 +182,8 @@ const globalStyles = css`
     width: 40px;
   }
 
-  .message-terms {
-    margin-right: 8px;
-    font-family: monospace;
-  }
-
   .support-sources ul {
     margin-top: 5px;
-  }
-
-  .systemjob {
-    margin-top: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-
-  .systemjob .progress {
-    margin-top: 2px;
-    margin-bottom: 5px;
-  }
-
-  .systemjob .finished {
-    display: none;
-    position: relative;
-    top: -1px;
-    left: 2px;
-    font-family: "Arial", sans-serif;
-    font-size: 11px;
-  }
-
-  .systemjobs-none {
-    margin-top: 10px;
   }
 
   .notifications-none {
@@ -259,47 +210,6 @@ const globalStyles = css`
 
   .system-messages {
     font-size: 12px;
-  }
-
-  .notification {
-    margin-top: 10px !important;
-  }
-
-  .notification i {
-    color: #000;
-  }
-
-  .notification-head {
-    margin-bottom: 5px;
-  }
-
-  .notification-timestamp {
-    margin-left: 3px;
-    font-size: 10px;
-  }
-
-  .notification-solutions {
-    margin-top: 10px;
-  }
-
-  .notification-solutions label {
-    font-size: 13px;
-  }
-
-  .notification form {
-    margin-bottom: 0px;
-  }
-
-  .notification-solutions h4 {
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 1px;
-  }
-
-  .notification-solutions .btn {
-    margin-top: 3px;
-    font-size: 12px;
-    padding: 3px 11px;
   }
 
   .change-message-processing {
@@ -2192,16 +2102,6 @@ const globalStyles = css`
   .tag-remove:before,
   .pill-remove:before {
     content: "×";
-  }
-
-  #react-gettingstarted {
-    margin-left: -19px;
-    margin-right: -19px;
-    margin-top: -4px;
-  }
-
-  #react-gettingstarted iframe {
-    height: 1000px;
   }
 
   .field-analyzer {

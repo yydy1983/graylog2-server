@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Qs from 'qs';
+import styled, { css } from 'styled-components';
 
 import { Grid, Row, Col, Button } from 'components/graylog';
 import { Spinner, Icon } from 'components/common';
@@ -8,7 +9,15 @@ import ActionsProvider from 'injection/ActionsProvider';
 
 const GettingStartedActions = ActionsProvider.getActions('GettingStarted');
 
+const GettingStartedIframe = styled.iframe(({ minHeight, hidden }) => css`
+  width: 100%;
+  display: ${hidden ? 'none' : 'block'};
+  min-height: ${minHeight ? `${minHeight}px` : 'calc(100vh - 50px - 20px - 35px)'};
+`);
+
 class GettingStarted extends React.Component {
+  timeoutId = null;
+
   static propTypes = {
     clusterId: PropTypes.string.isRequired,
     masterOs: PropTypes.string.isRequired,
@@ -28,8 +37,6 @@ class GettingStarted extends React.Component {
     guideUrl: '',
     showStaticContent: false,
   };
-
-  timeoutId = null;
 
   componentDidMount() {
     if (window.addEventListener) {
@@ -113,16 +120,6 @@ class GettingStarted extends React.Component {
         m: noDismissButton,
       });
 
-      const iframeStyles = {
-        minHeight: minHeight,
-        height: minHeight,
-        width: '100%',
-      };
-      // hide iframe if there's no content loaded yet
-      if (!guideLoaded) {
-        iframeStyles.display = 'none';
-      }
-
       const url = guideUrl === '' ? (`${gettingStartedUrl}?${query}`) : guideUrl;
       let spinner = null;
       if (!guideLoaded) {
@@ -140,19 +137,20 @@ class GettingStarted extends React.Component {
       gettingStartedContent = (
         <div>
           {spinner}
-          <iframe src={url}
-                  style={iframeStyles}
-                  id="getting-started-frame"
-                  frameBorder="0"
-                  scrolling="yes"
-                  title="getting-started-content">
+          <GettingStartedIframe src={url}
+                                hidden={!guideLoaded}
+                                minHeight={minHeight}
+                                id="getting-started-frame"
+                                frameBorder="0"
+                                scrolling="yes"
+                                title="getting-started-content">
             <p>Sorry, no iframes</p>
-          </iframe>
+          </GettingStartedIframe>
         </div>
       );
     }
     return (
-      <div id="react-gettingstarted">
+      <div>
         <div className="pull-right">{dismissButton}</div>
         {gettingStartedContent}
       </div>
