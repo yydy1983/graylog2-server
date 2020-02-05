@@ -2,8 +2,32 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Immutable from 'immutable';
 import { isEqual } from 'lodash';
+import styled from 'styled-components';
+
 import { Button } from 'components/graylog';
 import TypeAheadInput from 'components/common/TypeAheadInput';
+
+const PillList = styled.ul`
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  margin-left: 10px;
+  vertical-align: middle;
+
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+`;
+
+const PillWrap = styled.span`
+  font-size: 14px;
+  margin-right: 5px;
+  color: #333;
+  background-color: #E3E5E5;
+  padding: 6px 12px;
+`;
 
 /**
  * Component that renders a data filter input with suggestion capabilities.
@@ -181,10 +205,10 @@ class TypeAheadDataFilter extends React.Component {
     const filtersContent = filters.map((filter) => {
       return (
         <li key={`li-${filter}`}>
-          <span className="pill label label-default">
+          <PillWrap className="label label-default">
             {filterBy}: {filter}
             <button type="button" className="tag-remove" data-target={filter} onClick={this._onFilterRemoved} />
-          </span>
+          </PillWrap>
         </li>
       );
     });
@@ -217,9 +241,9 @@ class TypeAheadDataFilter extends React.Component {
             Reset
           </Button>
         </form>
-        <ul className="pill-list">
+        <PillList>
           {filtersContent}
-        </ul>
+        </PillList>
       </div>
     );
   }

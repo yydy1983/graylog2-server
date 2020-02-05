@@ -531,13 +531,6 @@ const globalStyles = css`
     display: none;
   }
 
-  .datatable-badge {
-    border-radius: 2px;
-    display: inline-block;
-    padding: 5px;
-    vertical-align: baseline;
-  }
-
   .tooltip .tooltip-inner {
     max-width: 300px;
   }
@@ -1741,54 +1734,6 @@ const globalStyles = css`
   .form-group-inline {
     display: inline-block;
     margin: 0;
-  }
-
-  ul.tag-list,
-  ul.pill-list {
-    display: inline-block;
-    list-style: none;
-    padding: 0;
-    position: relative;
-  }
-
-  ul.pill-list {
-    margin-left: 10px;
-    vertical-align: middle;
-  }
-
-  ul.tag-list > li,
-  ul.pill-list > li {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .tags-input ul.tag-list > li {
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
-
-  .tag,
-  .pill {
-    font-size: 14px;
-    margin-right: 5px;
-  }
-
-  .pill {
-    color: #333;
-    background-color: #E3E5E5;
-    padding: 6px 12px;
-  }
-
-  .tag-remove,
-  .pill-remove {
-    color: #333;
-    cursor: pointer;
-    margin-left: 5px;
-  }
-
-  .tag-remove:before,
-  .pill-remove:before {
-    content: "×";
   }
 
   .field-analyzer {
