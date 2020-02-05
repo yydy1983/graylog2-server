@@ -6964,24 +6964,10 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "FormControl-sc-1amoaox-0",
-                                                  "isStatic": true,
-                                                  "lastClassName": "hdNTyr",
+                                                  "isStatic": false,
+                                                  "lastClassName": "cFuMli",
                                                   "rules": Array [
-                                                    "color:",
-                                                    "#1F1F1F",
-                                                    ";background-color:",
-                                                    "#FFF",
-                                                    ";border-color:",
-                                                    "#DCE1E5",
-                                                    ";&:focus{border-color:",
-                                                    "#6DC6E7",
-                                                    ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                    "rgba(109,198,231,0.4)",
-                                                    ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                    "#b8b8b8",
-                                                    ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                    "#DCE1E5",
-                                                    ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                    [Function],
                                                   ],
                                                 },
                                                 "displayName": "FormControl",
@@ -7005,7 +6991,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                           >
                                             <FormControl
                                               bsClass="form-control"
-                                              className="FormControl-sc-1amoaox-0 hdNTyr"
+                                              className="FormControl-sc-1amoaox-0 cFuMli"
                                               componentClass="input"
                                               inputRef={[Function]}
                                               label="Threshold"
@@ -7016,7 +7002,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                               value={0}
                                             >
                                               <input
-                                                className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                                className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                                 id="aggregation-threshold"
                                                 label="Threshold"
                                                 name="threshold"
@@ -12367,24 +12353,10 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "FormControl-sc-1amoaox-0",
-                                                  "isStatic": true,
-                                                  "lastClassName": "hdNTyr",
+                                                  "isStatic": false,
+                                                  "lastClassName": "cFuMli",
                                                   "rules": Array [
-                                                    "color:",
-                                                    "#1F1F1F",
-                                                    ";background-color:",
-                                                    "#FFF",
-                                                    ";border-color:",
-                                                    "#DCE1E5",
-                                                    ";&:focus{border-color:",
-                                                    "#6DC6E7",
-                                                    ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                    "rgba(109,198,231,0.4)",
-                                                    ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                    "#b8b8b8",
-                                                    ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                    "#DCE1E5",
-                                                    ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                    [Function],
                                                   ],
                                                 },
                                                 "displayName": "FormControl",
@@ -12408,7 +12380,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                           >
                                             <FormControl
                                               bsClass="form-control"
-                                              className="FormControl-sc-1amoaox-0 hdNTyr"
+                                              className="FormControl-sc-1amoaox-0 cFuMli"
                                               componentClass="input"
                                               inputRef={[Function]}
                                               label=""
@@ -12419,7 +12391,7 @@ exports[`AggregationConditionExpression rendering conditions should render a boo
                                               value={0}
                                             >
                                               <input
-                                                className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                                className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                                 id="aggregation-threshold"
                                                 label=""
                                                 name="threshold"
@@ -19746,24 +19718,10 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "FormControl-sc-1amoaox-0",
-                                                  "isStatic": true,
-                                                  "lastClassName": "hdNTyr",
+                                                  "isStatic": false,
+                                                  "lastClassName": "cFuMli",
                                                   "rules": Array [
-                                                    "color:",
-                                                    "#1F1F1F",
-                                                    ";background-color:",
-                                                    "#FFF",
-                                                    ";border-color:",
-                                                    "#DCE1E5",
-                                                    ";&:focus{border-color:",
-                                                    "#6DC6E7",
-                                                    ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                    "rgba(109,198,231,0.4)",
-                                                    ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                    "#b8b8b8",
-                                                    ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                    "#DCE1E5",
-                                                    ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                    [Function],
                                                   ],
                                                 },
                                                 "displayName": "FormControl",
@@ -19787,7 +19745,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                           >
                                             <FormControl
                                               bsClass="form-control"
-                                              className="FormControl-sc-1amoaox-0 hdNTyr"
+                                              className="FormControl-sc-1amoaox-0 cFuMli"
                                               componentClass="input"
                                               inputRef={[Function]}
                                               label="Threshold"
@@ -19798,7 +19756,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                               value={0}
                                             >
                                               <input
-                                                className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                                className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                                 id="aggregation-threshold"
                                                 label="Threshold"
                                                 name="threshold"
@@ -26971,24 +26929,10 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                           "attrs": Array [],
                                                           "componentStyle": ComponentStyle {
                                                             "componentId": "FormControl-sc-1amoaox-0",
-                                                            "isStatic": true,
-                                                            "lastClassName": "hdNTyr",
+                                                            "isStatic": false,
+                                                            "lastClassName": "cFuMli",
                                                             "rules": Array [
-                                                              "color:",
-                                                              "#1F1F1F",
-                                                              ";background-color:",
-                                                              "#FFF",
-                                                              ";border-color:",
-                                                              "#DCE1E5",
-                                                              ";&:focus{border-color:",
-                                                              "#6DC6E7",
-                                                              ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                              "rgba(109,198,231,0.4)",
-                                                              ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                              "#b8b8b8",
-                                                              ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                              "#DCE1E5",
-                                                              ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                              [Function],
                                                             ],
                                                           },
                                                           "displayName": "FormControl",
@@ -27012,7 +26956,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                     >
                                                       <FormControl
                                                         bsClass="form-control"
-                                                        className="FormControl-sc-1amoaox-0 hdNTyr"
+                                                        className="FormControl-sc-1amoaox-0 cFuMli"
                                                         componentClass="input"
                                                         inputRef={[Function]}
                                                         label=""
@@ -27023,7 +26967,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                         value={0}
                                                       >
                                                         <input
-                                                          className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                                          className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                                           id="aggregation-threshold"
                                                           label=""
                                                           name="threshold"
@@ -34267,24 +34211,10 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "FormControl-sc-1amoaox-0",
-                                                        "isStatic": true,
-                                                        "lastClassName": "hdNTyr",
+                                                        "isStatic": false,
+                                                        "lastClassName": "cFuMli",
                                                         "rules": Array [
-                                                          "color:",
-                                                          "#1F1F1F",
-                                                          ";background-color:",
-                                                          "#FFF",
-                                                          ";border-color:",
-                                                          "#DCE1E5",
-                                                          ";&:focus{border-color:",
-                                                          "#6DC6E7",
-                                                          ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                          "rgba(109,198,231,0.4)",
-                                                          ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                          "#b8b8b8",
-                                                          ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                          "#DCE1E5",
-                                                          ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                          [Function],
                                                         ],
                                                       },
                                                       "displayName": "FormControl",
@@ -34308,7 +34238,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                 >
                                                   <FormControl
                                                     bsClass="form-control"
-                                                    className="FormControl-sc-1amoaox-0 hdNTyr"
+                                                    className="FormControl-sc-1amoaox-0 cFuMli"
                                                     componentClass="input"
                                                     inputRef={[Function]}
                                                     label="Threshold"
@@ -34319,7 +34249,7 @@ exports[`AggregationConditionExpression rendering conditions should render a gro
                                                     value={0}
                                                   >
                                                     <input
-                                                      className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                                      className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                                       id="aggregation-threshold"
                                                       label="Threshold"
                                                       name="threshold"
@@ -41252,24 +41182,10 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "FormControl-sc-1amoaox-0",
-                                              "isStatic": true,
-                                              "lastClassName": "hdNTyr",
+                                              "isStatic": false,
+                                              "lastClassName": "cFuMli",
                                               "rules": Array [
-                                                "color:",
-                                                "#1F1F1F",
-                                                ";background-color:",
-                                                "#FFF",
-                                                ";border-color:",
-                                                "#DCE1E5",
-                                                ";&:focus{border-color:",
-                                                "#6DC6E7",
-                                                ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                "rgba(109,198,231,0.4)",
-                                                ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                "#b8b8b8",
-                                                ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                "#DCE1E5",
-                                                ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                [Function],
                                               ],
                                             },
                                             "displayName": "FormControl",
@@ -41293,7 +41209,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                       >
                                         <FormControl
                                           bsClass="form-control"
-                                          className="FormControl-sc-1amoaox-0 hdNTyr"
+                                          className="FormControl-sc-1amoaox-0 cFuMli"
                                           componentClass="input"
                                           inputRef={[Function]}
                                           label="Threshold"
@@ -41304,7 +41220,7 @@ exports[`AggregationConditionExpression rendering conditions should render empty
                                           value={0}
                                         >
                                           <input
-                                            className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                            className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                             id="aggregation-threshold"
                                             label="Threshold"
                                             name="threshold"
@@ -48498,24 +48414,10 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "FormControl-sc-1amoaox-0",
-                                              "isStatic": true,
-                                              "lastClassName": "hdNTyr",
+                                              "isStatic": false,
+                                              "lastClassName": "cFuMli",
                                               "rules": Array [
-                                                "color:",
-                                                "#1F1F1F",
-                                                ";background-color:",
-                                                "#FFF",
-                                                ";border-color:",
-                                                "#DCE1E5",
-                                                ";&:focus{border-color:",
-                                                "#6DC6E7",
-                                                ";box-shadow(inset 0 1px 1px rgba(0,0,0,.075),0 0 8px ",
-                                                "rgba(109,198,231,0.4)",
-                                                ");}&::-moz-placeholder,&:-ms-input-placeholder,&::-webkit-input-placeholder{color:",
-                                                "#b8b8b8",
-                                                ";}&[disabled],&[readonly],fieldset[disabled] &{background-color:",
-                                                "#DCE1E5",
-                                                ";}~ .form-control-feedback.glyphicon{display:none;}",
+                                                [Function],
                                               ],
                                             },
                                             "displayName": "FormControl",
@@ -48539,7 +48441,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                       >
                                         <FormControl
                                           bsClass="form-control"
-                                          className="FormControl-sc-1amoaox-0 hdNTyr"
+                                          className="FormControl-sc-1amoaox-0 cFuMli"
                                           componentClass="input"
                                           inputRef={[Function]}
                                           label="Threshold"
@@ -48550,7 +48452,7 @@ exports[`AggregationConditionExpression rendering conditions should render simpl
                                           value={12}
                                         >
                                           <input
-                                            className="FormControl-sc-1amoaox-0 hdNTyr form-control"
+                                            className="FormControl-sc-1amoaox-0 cFuMli form-control"
                                             id="aggregation-threshold"
                                             label="Threshold"
                                             name="threshold"
