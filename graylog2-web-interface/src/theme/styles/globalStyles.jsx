@@ -114,16 +114,6 @@ const globalStyles = css`
     padding: 12px 15px 0 15px;
   }
 
-  #universalsearch {
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #D1D1D1;
-  }
-
-  #universalsearch-container {
-    padding: 0 25px;
-  }
-
   .content {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -201,12 +191,6 @@ const globalStyles = css`
   #main-content-search {
     margin-bottom: 0;
     margin-top: -15px;
-  }
-
-  #universalsearch {
-    padding: 5px;
-    margin-bottom: 0px;
-    margin-top: 15px;
   }
 
   a.fields-set-chooser {
@@ -542,22 +526,6 @@ const globalStyles = css`
 
   .subsystems-row {
     margin-bottom: 10px;
-  }
-
-  #universalsearch .timerange-selector-container .keyword .icon {
-    margin-left: 5px;
-  }
-
-  #universalsearch .timerange-selector-container .keyword .keyword-preview {
-    margin-top: 4px;
-    margin-left: 45px;
-    font-size: 11px;
-  }
-
-  #universalsearch .timerange-selector-container .keyword .keyword-preview .fromto span {
-    background-color: #fec;
-    padding-left: 3px;
-    padding-right: 3px;
   }
 
   .no-active-nodes {
