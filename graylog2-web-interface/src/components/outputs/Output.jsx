@@ -59,6 +59,10 @@ const NodeRowInfo = styled.div`
   }
 `;
 
+const ExtractorTitle = styled.h2`
+  margin-bottom: 2px;
+`;
+
 class Output extends React.Component {
   static propTypes = {
     streamId: PropTypes.string,
@@ -138,10 +142,10 @@ class Output extends React.Component {
         <Col md={12}>
           <Row className="row-sm">
             <Col md={6}>
-              <h2 className="extractor-title">
+              <ExtractorTitle>
                 {output.title} {contentPack}
                 <small>ID: {output.id}</small>
-              </h2>
+              </ExtractorTitle>
               Type: {output.type}
             </Col>
             <Col md={6}>

@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Icon } from 'components/common';
 import DocumentationLink from './DocumentationLink';
 import DocsHelper from '../../util/DocsHelper';
+
+const SupportSourcesList = styled.ul`
+  margin: 5px 0 0;
+  padding: 5px 0 0;
+`;
 
 const SupportSources = () => (
   <div className="support-sources">
@@ -12,7 +18,7 @@ const SupportSources = () => (
       <DocumentationLink page={DocsHelper.PAGES.WELCOME} text="documentation" />.
     </p>
 
-    <ul>
+    <SupportSourcesList>
       <li>
         <Icon name="group" />&nbsp;
         <a href="https://www.graylog.org/community-support/" target="_blank" rel="noopener noreferrer">Community support</a>
@@ -25,7 +31,7 @@ const SupportSources = () => (
         <Icon name="heart" />&nbsp;
         <a href="https://www.graylog.org/professional-support" target="_blank" rel="noopener noreferrer">Professional support</a>
       </li>
-    </ul>
+    </SupportSourcesList>
   </div>
 );
 

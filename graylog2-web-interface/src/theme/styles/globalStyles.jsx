@@ -186,10 +186,6 @@ const globalStyles = css`
     width: 40px;
   }
 
-  .support-sources ul {
-    margin-top: 5px;
-  }
-
   .notifications-none {
     margin-top: 10px;
   }
@@ -429,13 +425,6 @@ const globalStyles = css`
     margin: 0 4px 0 0
   }
 
-<<<<<<< HEAD
-=======
-  .rickshaw_graph .detail .date {
-    color: #a0a0a0
-  }
-
->>>>>>> 62db7f25bb... field-graph-container
   #field-graphs .spinner {
     margin-bottom: 10px;
     text-align: center;
@@ -457,37 +446,6 @@ const globalStyles = css`
     list-style-type: square;
   }
 
-  .metric-list {
-    padding: 0;
-  }
-
-  .metric-list li {
-    margin-bottom: 5px;
-  }
-
-  .metric-list li .prefix {
-    color: #aaa;
-  }
-
-  .metric-list li .name {
-    font-size: 13px;
-    font-family: monospace;
-    word-break: break-all;
-  }
-
-  .metric-list li .metric {
-    margin-left: 10px;
-    padding: 10px;
-  }
-
-  .metric-list li .metric h3 {
-    margin-bottom: 5px;
-  }
-
-  .metric-list dl {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
 
   .metrics-filter {
     margin-bottom: 15px !important;
@@ -515,10 +473,6 @@ const globalStyles = css`
 
   dl.metric-histogram dd {
     margin-left: 125px;
-  }
-
-  .metric-list li .name .open:hover {
-    text-decoration: none;
   }
 
   #user-list th.user-type {
@@ -1714,10 +1668,6 @@ const globalStyles = css`
     vertical-align: middle;
   }
 
-  .no-alarm-callbacks {
-    margin-top: 10px;
-  }
-
   div.alert-callback hr {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1737,10 +1687,6 @@ const globalStyles = css`
     border-bottom: 1px solid #ececec;
   }
 
-  .triggered-alerts .page-size {
-    margin-top: -23px; /* Height of the header */
-  }
-
   /* // Ensure that the stream start/pause buttons have the same size. */
   .toggle-stream-button {
     width: 8.5em;
@@ -1750,25 +1696,10 @@ const globalStyles = css`
     font-size: 11px;
   }
 
-  h2.extractor-title {
-    margin-bottom: 2px;
-  }
-
   p.failure-exception {
     margin-top: 5px;
     margin-bottom: 10px;
     color: #aaa;
-  }
-
-  i.error-icon {
-    position: relative;
-    top: -3px;
-  }
-
-  .support-sources ul {
-    margin: 0;
-    padding: 0;
-    margin-top: 5px;
   }
 
   .failure-object {
