@@ -23,7 +23,6 @@ const Background: React.AbstractComponent<{trend: ?string}> = styled.div(({ tren
 
   return css`
     text-align: right;
-
     ${trend && css`
       background-color: ${bgColor};
       color: ${util.contrastingColor(bgColor)};

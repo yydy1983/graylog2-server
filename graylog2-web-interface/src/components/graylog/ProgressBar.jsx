@@ -17,7 +17,9 @@ const variants = (styles) => {
     }`;
   });
 
-  return css`${style}`;
+  return css`
+    ${style}
+  `;
 };
 
 export const progressBarStyles = css`
@@ -31,14 +33,16 @@ export const progressBarStyles = css`
 
     .progress-striped .progress-bar,
     .progress-bar-striped {
-      background-image: linear-gradient(45deg,
-                        ${defaultStripColor} 25%,
-                        transparent 25%,
-                        transparent 50%,
-                        ${defaultStripColor} 50%,
-                        ${defaultStripColor} 75%,
-                        transparent 75%,
-                        transparent);
+      background-image: linear-gradient(
+        45deg,
+        ${defaultStripColor} 25%,
+        transparent 25%,
+        transparent 50%,
+        ${defaultStripColor} 50%,
+        ${defaultStripColor} 75%,
+        transparent 75%,
+        transparent
+      );
     }
 
     ${variants(['success', 'info', 'warning', 'danger'])};

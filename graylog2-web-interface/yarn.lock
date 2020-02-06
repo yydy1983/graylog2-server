@@ -7731,7 +7731,11 @@ gray-matter@^3.0.8:
   dependencies:
     "@babel/preset-env" "7.6.3"
     babel-eslint "9.0.0"
+<<<<<<< HEAD
     eslint-config-graylog "file:../../../../Library/Caches/Yarn/v4/npm-graylog-web-plugin-3.3.0-SNAPSHOT-497b46be-6e42-4f9f-b1ab-aab57238e972-1580378277465/node_modules/eslint-config-graylog"
+=======
+    eslint-config-graylog "file:../../../../../../Library/Caches/Yarn/v6/npm-graylog-web-plugin-3.3.0-SNAPSHOT-7ce73815-2e76-4628-84e2-1523ccd1dcaa-1581018423157/node_modules/eslint-config-graylog"
+>>>>>>> 1379372de... convert to stylelint-config-standard and lint
     html-webpack-plugin "3.2.0"
     javascript-natural-sort "0.7.1"
     jquery "3.4.1"
@@ -15612,6 +15616,13 @@ stylelint-config-recommended@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-3.0.0.tgz#e0e547434016c5539fe2650afd58049a2fd1d657"
   integrity sha512-F6yTRuc06xr1h5Qw/ykb2LuFynJ2IxkKfCMf+1xqPffkxh0S09Zc902XCffcsw/XMFq/OzQ1w54fLIDtmRNHnQ==
+
+stylelint-config-standard@^19.0.0:
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-standard/-/stylelint-config-standard-19.0.0.tgz#66f0cf13f33b8a9e34965881493b38fc1313693a"
+  integrity sha512-VvcODsL1PryzpYteWZo2YaA5vU/pWfjqBpOvmeA8iB2MteZ/ZhI1O4hnrWMidsS4vmEJpKtjdhLdfGJmmZm6Cg==
+  dependencies:
+    stylelint-config-recommended "^3.0.0"
 
 stylelint-config-styled-components@^0.1.1:
   version "0.1.1"

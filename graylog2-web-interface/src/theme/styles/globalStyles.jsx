@@ -27,11 +27,16 @@ const globalStyles = css`
     border-top: 1px solid #e3e3e3;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: normal;
     padding: 0;
     margin: 0;
-    color: #333
+    color: #333;
   }
 
   h1 {
@@ -48,11 +53,6 @@ const globalStyles = css`
 
   h4 {
     font-size: 14px;
-    font-weight: bold;
-  }
-
-  h4 {
-    font-size: 14px;
     font-weight: normal;
   }
 
@@ -61,17 +61,24 @@ const globalStyles = css`
   }
 
   /* Remove boostrap outline */
-  a:active, select:active, input[type="file"]:active, input[type="radio"]:active, input[type="checkbox"]:active, .btn:active {
+  a:active,
+  select:active,
+  input[type="file"]:active,
+  input[type="radio"]:active,
+  input[type="checkbox"]:active,
+  .btn:active {
     outline: none;
     outline-offset: 0;
   }
 
-  input.form-control, select.form-control, textarea.form-control {
+  input.form-control,
+  select.form-control,
+  textarea.form-control {
     color: #666;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     &:hover {
-      border-color: hsl(0,0%,70%)
+      border-color: hsl(0, 0%, 70%);
     }
   }
 
@@ -113,18 +120,13 @@ const globalStyles = css`
   }
 
   .modal-backdrop {
-    height: 100000%;  // yes, really. this fixes the backdrop being cut off when the page is scrolled.
+    /* yes, really. this fixes the backdrop being cut off when the page is scrolled. */
+    height: 100000%;
     z-index: 1030;
   }
 
   .navbar-brand {
     padding: 12px 15px 0 15px;
-  }
-
-  #universalsearch {
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #D1D1D1;
   }
 
   #universalsearch-container {
@@ -135,19 +137,16 @@ const globalStyles = css`
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: #fff;
-    border: 1px solid #D1D1D1;
+    border: 1px solid #d1d1d1;
     margin-bottom: 10px;
+  }
+
+  .content-head {
+    padding-bottom: 0;
   }
 
   .content p.description {
     margin-top: 3px;
-  }
-
-  .content-head {
-    padding-bottom: 0px;
-  }
-
-  .content p.description {
     color: #939393;
   }
 
@@ -186,7 +185,7 @@ const globalStyles = css`
   .content-col {
     padding: 15px 10px;
     background-color: #fff;
-    border: 1px solid #D1D1D1;
+    border: 1px solid #d1d1d1;
     margin-top: 15px;
   }
 
@@ -218,7 +217,7 @@ const globalStyles = css`
     margin-top: 10px;
   }
 
-  #sidebar .actions>div {
+  #sidebar .actions > div {
     margin: 5px 5px 0 0;
   }
 
@@ -228,7 +227,7 @@ const globalStyles = css`
   }
 
   #main-row {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   #main-content-sidebar {
@@ -241,15 +240,17 @@ const globalStyles = css`
     padding: 5px 25px;
   }
 
-  // This is rendered inside a #main-content, and we need to compensate the margin-top to make it look nicer
+  /* This is rendered inside a #main-content, and we need to compensate the margin-top to make it look nicer */
   #main-content-search {
     margin-bottom: 0;
     margin-top: -15px;
   }
 
   #universalsearch {
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
     padding: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 15px;
   }
 
@@ -293,14 +294,10 @@ const globalStyles = css`
     font-family: monospace;
     font-size: 13px;
     width: 100%;
-    border: 0px;
+    border: 0;
     background-color: #fff;
     box-shadow: none;
     color: inherit;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -webkit-transition: none;
-    -moz-transition: none;
     transition: none;
     outline: none;
     padding: 0;
@@ -383,6 +380,8 @@ const globalStyles = css`
   }
 
   .support-sources ul {
+    margin: 0;
+    padding: 0;
     margin-top: 5px;
   }
 
@@ -414,7 +413,7 @@ const globalStyles = css`
   }
 
   .notification-badge-link:hover {
-    border: 0px !important;
+    border: 0 !important;
     text-decoration: none !important;
   }
 
@@ -423,11 +422,11 @@ const globalStyles = css`
   }
 
   .no-bm {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .alert {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 5px;
   }
 
@@ -461,7 +460,7 @@ const globalStyles = css`
   }
 
   .notification form {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .notification-solutions h4 {
@@ -474,13 +473,6 @@ const globalStyles = css`
     margin-top: 3px;
     font-size: 12px;
     padding: 3px 11px;
-  }
-
-  .node-row {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 8px;
-    margin-top: 15px;
-    margin-bottom: 0px;
   }
 
   .change-message-processing {
@@ -528,18 +520,19 @@ const globalStyles = css`
     margin-bottom: 0;
   }
 
-  s
   .input-list h2 {
     margin-bottom: 5px;
   }
 
   .node-row {
     margin-bottom: 8px;
-    margin-top: 0px;
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
   }
 
   .node-row .well {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 3px;
     font-family: monospace;
     font-size: 11px;
@@ -655,7 +648,7 @@ const globalStyles = css`
   }
 
   .xtrc-metrics .span4 {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .xtrc-metrics h3 .unit {
@@ -664,7 +657,7 @@ const globalStyles = css`
 
   .xtrc-metrics dl {
     margin-top: 3px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .xtrc-metrics dt {
@@ -708,15 +701,15 @@ const globalStyles = css`
     font-size: 16px;
     position: relative;
     top: 4px;
-    color: #16ACE3;
+    color: #16ace3;
   }
 
   .open-analyze-field-active {
-    color: #1189B5;
+    color: #1189b5;
   }
 
   .open-analyze-field:hover {
-    color: #1189B5;
+    color: #1189b5;
   }
 
   .analyze-field {
@@ -754,19 +747,14 @@ const globalStyles = css`
     margin-left: 5px;
   }
 
-  .timerange-selector-container .input-prepend, .input-append {
+  .timerange-selector-container .input-prepend,
+  .input-append {
     margin-bottom: 0;
   }
 
   .timerange-selector select {
     margin-bottom: 0;
   }
-
-  //#relative-timerange-selector {
-  //  font-size: 12px;
-  //  line-height: 15px;
-  //  height: 25px;
-  //}
 
   .timerange-chooser {
     float: left;
@@ -843,14 +831,12 @@ const globalStyles = css`
     background: rgb(0, 0, 0) transparent;
     background: rgba(0, 0, 0, 0.8);
     filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-    -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   }
 
   .alpha70 {
     background: rgb(0, 0, 0) transparent;
     background: rgba(0, 0, 0, 0.7);
     filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-    -ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   }
 
   #scroll-to-hint {
@@ -864,8 +850,6 @@ const globalStyles = css`
     z-index: 2000;
     width: 200px;
     text-align: center;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
     cursor: pointer;
     border-radius: 10px 10px 10px 10px;
   }
@@ -888,23 +872,23 @@ const globalStyles = css`
   }
 
   .rickshaw_graph .detail .x_label {
-    display: none
+    display: none;
   }
 
   .rickshaw_graph .detail .item {
     line-height: 1.4;
-    padding: 0.5em
+    padding: 0.5em;
   }
 
   .detail_swatch {
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 0 4px 0 0
+    margin: 0 4px 0 0;
   }
 
   .rickshaw_graph .detail .date {
-    color: #a0a0a0
+    color: #a0a0a0;
   }
 
   .input-io .total {
@@ -1003,8 +987,8 @@ const globalStyles = css`
   }
 
   .metric-list dl {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .metrics-filter {
@@ -1054,7 +1038,7 @@ const globalStyles = css`
   }
 
   .dashboard {
-    color: #333333;
+    color: #333;
     margin: 0;
     width: 100%;
   }
@@ -1075,15 +1059,10 @@ const globalStyles = css`
     line-height: 11px;
   }
 
-  .dashboard .widget .controls {
-    position: relative;
-    left: -3px;
-  }
-
   .dashboard .widget .reloading {
     margin-right: 2px;
     font-weight: bold;
-    color: #0085A7;
+    color: #0085a7;
     display: none;
   }
 
@@ -1093,6 +1072,8 @@ const globalStyles = css`
 
   .dashboard .widget .controls {
     display: none;
+    position: relative;
+    left: -3px;
   }
 
   .datatable-badge {
@@ -1111,7 +1092,7 @@ const globalStyles = css`
   }
 
   .tooltip .tooltip-inner .datapoint-info .date {
-    color: #E3E5E5;
+    color: #e3e5e5;
   }
 
   .dashboard .widget .dc-chart {
@@ -1127,7 +1108,7 @@ const globalStyles = css`
   }
 
   .dashboard .widget .load-error {
-    color: #FF3B00;
+    color: #ff3b00;
     margin-right: 5px;
   }
 
@@ -1242,8 +1223,8 @@ const globalStyles = css`
   }
 
   .shard-meters dl {
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   .shard-meters dl dt {
@@ -1301,8 +1282,9 @@ const globalStyles = css`
     margin-bottom: 7px;
   }
 
-  .node-buffer-usage .progress-bar, .journal-details-usage .progress-bar {
-    text-shadow: 0 1px 2px rgba(0,0,0,0.4), 2px -1px 3px rgba(255,255,255,0.5);
+  .node-buffer-usage .progress-bar,
+  .journal-details-usage .progress-bar {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 2px -1px 3px rgba(255, 255, 255, 0.5);
 
     span {
       margin-left: 1px;
@@ -1319,7 +1301,7 @@ const globalStyles = css`
 
   dl.system-journal {
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .system-journal dt {
@@ -1399,7 +1381,8 @@ const globalStyles = css`
     font-size: 14px;
   }
 
-  .dynatable-search input, .dynatable-per-page select {
+  .dynatable-search input,
+  .dynatable-per-page select {
     position: relative;
     top: 3px;
     margin-left: 3px;
@@ -1472,12 +1455,7 @@ const globalStyles = css`
   }
 
   .add-alert-type {
-    margin-bottom: 0px;
-  }
-
-  .alert-type-form {
-    font-size: 14px;
-    margin-top: 15px;
+    margin-bottom: 0;
   }
 
   .alert-type-form .help-text {
@@ -1486,7 +1464,9 @@ const globalStyles = css`
     margin-left: 10px;
   }
 
-  .alert-type-form input[type=number], .alert-type-form input[type=text], .alert-type-form select {
+  .alert-type-form input[type=number],
+  .alert-type-form input[type=text],
+  .alert-type-form select {
     padding: 0 0 0 5px;
     height: 25px;
     vertical-align: baseline;
@@ -1501,9 +1481,36 @@ const globalStyles = css`
     width: 300px;
   }
 
+  .alert-type-form {
+    line-height: 26px;
+  }
+
+  .alert-type-form label.radio-inline {
+    margin-right: 0;
+    vertical-align: baseline;
+  }
+
+  .alert-type-form .radio-inline input[type=radio] {
+    position: relative;
+    margin-left: -20px;
+    margin-right: 5px;
+  }
+
+  .alert-type-form div.well {
+    margin-bottom: 0;
+  }
+
+  .alert-type-form .threshold-type {
+    margin: 0 5px;
+    vertical-align: baseline;
+  }
+
+  .form-inline .alert-type-form .form-control {
+    vertical-align: baseline;
+  }
 
   .add-alert-destination-type {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .alert-destination-form {
@@ -1560,12 +1567,13 @@ const globalStyles = css`
     margin-bottom: 7px;
   }
 
-  .streameditpermissions, .dashboardeditpermissions {
+  .streameditpermissions,
+  .dashboardeditpermissions {
     margin-top: 10px;
   }
 
   .query-exception {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   input.required-input-highlight {
@@ -1582,11 +1590,9 @@ const globalStyles = css`
   }
 
   .zeroclipboard-is-hover {
-    // via .btn-default:hover from bootstrap
     color: #333;
     background-color: #d7d9d9;
     border-color: #c3c8c8;
-    // bootstrap copy end
     cursor: move;
   }
 
@@ -1605,7 +1611,7 @@ const globalStyles = css`
   }
 
   .node-state {
-    cursor: help
+    cursor: help;
   }
 
   .node-row .dropdown-menu a.selected {
@@ -1616,7 +1622,7 @@ const globalStyles = css`
     left: -120px;
   }
 
-  #result-graph-timeline .annotation .content:before {
+  #result-graph-timeline .annotation .content::before {
     left: 117px;
   }
 
@@ -1728,7 +1734,7 @@ const globalStyles = css`
   .card .configuration-bundles .bundle-preview {
     border: 1px solid #ececec;
     border-radius: 2px;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
   }
 
@@ -1737,7 +1743,7 @@ const globalStyles = css`
   }
 
   .configuration-bundles .accordion {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid #ececec;
     border-radius: 2px;
   }
@@ -1746,9 +1752,7 @@ const globalStyles = css`
     margin: 0;
     border: 0;
     border-bottom: 1px solid #ececec;
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
+    border-radius: 0;
   }
 
   .configuration-bundles .accordion-inner {
@@ -1763,14 +1767,14 @@ const globalStyles = css`
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
     border-radius: 3px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
     padding: 10px;
   }
 
   .configuration-bundles .bundle-preview .preview-actions form {
     display: inline-block;
     margin-left: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .configuration-bundles .bundle-preview .preview-actions form:first-child {
@@ -1785,8 +1789,9 @@ const globalStyles = css`
     margin-bottom: 10px;
   }
 
-  .bundle-preview ul, .bundle-preview ol {
-    margin: 0px 0px 10px 25px;
+  .bundle-preview ul,
+  .bundle-preview ol {
+    margin: 0 0 10px 25px;
   }
 
   .bundle-preview ul {
@@ -1835,7 +1840,7 @@ const globalStyles = css`
   }
 
   .sources-filtering .control-group {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   #dc-sources-pie-chart svg {
@@ -1870,7 +1875,8 @@ const globalStyles = css`
     line-height: inherit !important;
   }
 
-  table th.actions, table td.actions {
+  table th.actions,
+  table td.actions {
     width: 110px;
   }
 
@@ -1900,7 +1906,7 @@ const globalStyles = css`
 
   ul.streams li.stream {
     display: block;
-    padding: 15px 0px;
+    padding: 15px 0;
   }
 
   ul.streams li.stream:not(:last-child) {
@@ -1914,7 +1920,7 @@ const globalStyles = css`
   ul.streams li.stream .stream-data .stream-actions {
     position: relative;
     float: right;
-    right: 0px;
+    right: 0;
     bottom: 20px;
   }
 
@@ -1950,7 +1956,7 @@ const globalStyles = css`
 
     li.entity-list-item {
       display: block;
-      padding: 15px 0px;
+      padding: 15px 0;
 
       h2 .label {
         margin-left: 5px;
@@ -1963,7 +1969,9 @@ const globalStyles = css`
         margin: 5px 0;
       }
 
-      .item-actions > .btn, .item-actions > .btn-group, .item-actions > span > .btn {
+      .item-actions > .btn,
+      .item-actions > .btn-group,
+      .item-actions > span > .btn {
         margin-left: 5px;
         margin-bottom: 5px;
       }
@@ -2031,13 +2039,13 @@ const globalStyles = css`
   }
 
   #message-table-paginator-bottom nav {
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-top: 1px #ddd solid;
     margin-left: -10px;
   }
 
   #message-table-paginator-bottom .affix {
-    z-index: 3; // show on top of .pagination .active links
+    z-index: 3; /* show on top of .pagination .active links */
     bottom: 1px;
   }
 
@@ -2056,7 +2064,7 @@ const globalStyles = css`
   }
 
   .search-results-table > div {
-    border-left: 1px solid #D1D1D1;
+    border-left: 1px solid #d1d1d1;
   }
 
   .messages-container {
@@ -2079,7 +2087,8 @@ const globalStyles = css`
     color: #fff;
   }
 
-  table.messages td, table.messages th {
+  table.messages td,
+  table.messages th {
     position: relative;
     left: 13px;
   }
@@ -2136,7 +2145,7 @@ const globalStyles = css`
     overflow: hidden;
   }
 
-  table.messages tr.message-row .message-wrapper:after {
+  table.messages tr.message-row .message-wrapper::after {
     content: "";
     text-align: right;
     position: absolute;
@@ -2226,10 +2235,10 @@ const globalStyles = css`
     position: relative;
     top: -10px;
   }
+
   .greyed-out {
-    filter:alpha(opacity=50); /* IE */
+    filter: alpha(opacity=50); /* IE */
     opacity: 0.5; /* Safari, Opera */
-    -moz-opacity:0.50; /* FireFox */
     z-index: 20;
   }
 
@@ -2252,7 +2261,7 @@ const globalStyles = css`
 
   .indexer-failures-body select.dynatable-per-page-select {
     position: relative;
-    top: 0px;
+    top: 0;
   }
 
   table.indexer-failures {
@@ -2263,7 +2272,9 @@ const globalStyles = css`
     margin-bottom: 5px;
   }
 
-  .graylog-node-heap .progress, .node-buffer-usage .progress, .journal-details-usage .progress {
+  .graylog-node-heap .progress,
+  .node-buffer-usage .progress,
+  .journal-details-usage .progress {
     margin-bottom: 5px;
   }
 
@@ -2280,7 +2291,7 @@ const globalStyles = css`
   }
 
   .graylog-node-heap p {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .graylog-node-heap .used-memory {
@@ -2295,17 +2306,19 @@ const globalStyles = css`
     background-color: #f5f5f5;
   }
 
-  dl.system-system, dl.system-rest {
+  dl.system-system,
+  dl.system-rest {
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .table-sm {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   .graylog-input {
     margin-top: 15px;
-    border-bottom: 1px
+    border-bottom: 1px;
   }
 
   .graylog-input-actions {
@@ -2370,34 +2383,6 @@ const globalStyles = css`
     cursor: pointer;
   }
 
-  .alert-type-form {
-    line-height: 26px;
-  }
-
-  .alert-type-form label.radio-inline {
-    margin-right: 0;
-    vertical-align: baseline;
-  }
-
-  .alert-type-form .radio-inline input[type=radio] {
-    position: relative;
-    margin-left: -20px;
-    margin-right: 5px;
-  }
-
-  .alert-type-form div.well {
-    margin-bottom: 0;
-  }
-
-  .alert-type-form .threshold-type {
-    margin: 0 5px;
-    vertical-align: baseline;
-  }
-
-  .form-inline .alert-type-form .form-control {
-    vertical-align: baseline;
-  }
-
   .filter .form-inline .form-group {
     display: inline-block;
     margin-bottom: 0;
@@ -2428,10 +2413,10 @@ const globalStyles = css`
   }
 
   .triggered-alerts .page-size {
-    margin-top: -23px; // Height of the header
+    margin-top: -23px; /* Height of the header */
   }
 
-  // Ensure that the stream start/pause buttons have the same size.
+  /* Ensure that the stream start/pause buttons have the same size. */
   .toggle-stream-button {
     width: 8.5em;
   }
@@ -2457,12 +2442,6 @@ const globalStyles = css`
   i.error-icon {
     position: relative;
     top: -3px;
-  }
-
-  .support-sources ul {
-    margin: 0;
-    padding: 0;
-    margin-top: 5px;
   }
 
   .failure-object {
@@ -2542,7 +2521,7 @@ const globalStyles = css`
 
   .pill {
     color: #333;
-    background-color: #E3E5E5;
+    background-color: #e3e5e5;
     padding: 6px 12px;
   }
 
@@ -2553,8 +2532,8 @@ const globalStyles = css`
     margin-left: 5px;
   }
 
-  .tag-remove:before,
-  .pill-remove:before {
+  .tag-remove::before,
+  .pill-remove::before {
     content: "×";
   }
 
@@ -2594,10 +2573,12 @@ const globalStyles = css`
   .sortable-list-cursor {
     cursor: move;
   }
+
   .sortable-list {
     .dragging {
       opacity: 0.5;
     }
+
     .over {
       border: 1px dashed #8c8e86;
     }

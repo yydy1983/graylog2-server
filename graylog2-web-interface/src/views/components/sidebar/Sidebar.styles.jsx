@@ -14,7 +14,7 @@ export const Container: React.ComponentType<{ open: boolean }> = styled.div`
   top: 50px;
   grid-column-start: 1;
   grid-column-end: ${props => (props.open ? 3 : 2)};
-  box-shadow: 3px 0 3px rgba(0, 0, 0, .25);
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.25);
 `;
 
 export const ContentOverlay = styled.div`
