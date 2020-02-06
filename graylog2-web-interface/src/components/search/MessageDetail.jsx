@@ -3,6 +3,7 @@ import React from 'react';
 import Immutable from 'immutable';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router';
+import styled from 'styled-components';
 
 import { Button, ButtonGroup, Row, Col, DropdownButton, MenuItem, Label } from 'components/graylog';
 import { Icon } from 'components/common';
@@ -16,6 +17,21 @@ import SurroundingSearchButton from 'components/search/SurroundingSearchButton';
 import Routes from 'routing/Routes';
 
 const StreamsStore = StoreProvider.getStore('Streams');
+
+const MessageDetailsTitle = styled.h3`
+  height: 30px;
+
+  a {
+    color: #000;
+  }
+
+  .label {
+    font-size: 50%;
+    line-height: 200%;
+    margin-left: 5px;
+    vertical-align: bottom;
+  }
+`;
 
 class MessageDetail extends React.Component {
   static propTypes = {
@@ -244,11 +260,10 @@ class MessageDetail extends React.Component {
         <Row className="row-sm">
           <Col md={12}>
             {this._formatMessageActions()}
-            <h3 className="message-details-title">
-              <Icon name="envelope" />
-            &nbsp;
+            <MessageDetailsTitle>
+              <Icon name="envelope" />&nbsp;
               {messageTitle}
-            </h3>
+            </MessageDetailsTitle>
           </Col>
         </Row>
         <Row>

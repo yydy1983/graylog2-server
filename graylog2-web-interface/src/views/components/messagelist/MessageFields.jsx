@@ -1,5 +1,6 @@
 // @flow strict
 import * as React from 'react';
+import styled from 'styled-components';
 
 import MessageField from 'views/components/messagelist/MessageField';
 import FieldType from 'views/logic/fieldtypes/FieldType';

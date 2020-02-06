@@ -1407,38 +1407,6 @@ const globalStyles = css`
     margin-left: 2px;
   }
 
-  #message-table-paginator-top {
-    width: 90%;
-  }
-
-  #message-table-paginator-top ul {
-    margin: 0;
-  }
-
-  #message-table-paginator-bottom {
-    height: 75px;
-    margin-top: 20px;
-  }
-
-  #message-table-paginator-bottom nav {
-    background-color: rgba(255,255,255,0.9);
-    border-top: 1px #ddd solid;
-    margin-left: -10px;
-  }
-
-  #message-table-paginator-bottom .affix {
-    z-index: 3; /* show on top of .pagination .active links */
-    bottom: 1px;
-  }
-
-  #message-table-paginator-bottom .affix-bottom {
-    position: absolute;
-  }
-
-  #message-table-paginator-bottom .affix-bottom nav {
-    border: 0;
-  }
-
   .search-results-table {
     border-left: 2px solid #e3e3e3;
     overflow-y: auto;
@@ -1447,21 +1415,6 @@ const globalStyles = css`
 
   .search-results-table > div {
     border-left: 1px solid #D1D1D1;
-  }
-
-  .message-details-title {
-    height: 30px;
-  }
-
-  .message-details-title a {
-    color: #000;
-  }
-
-  .message-details-title .label {
-    font-size: 50%;
-    line-height: 200%;
-    margin-left: 5px;
-    vertical-align: bottom;
   }
 
   dl.message-details {
@@ -1478,6 +1431,21 @@ const globalStyles = css`
     margin-bottom: 5px;
     padding-bottom: 5px;
     margin-left: 1px; /* Ensures that italic text is not cut */
+  }
+
+  dl.message-details dd.stream-list ul {
+    list-style-type: disc;
+    padding-left: 25px;
+  }
+
+  dl.message-details dd.stream-list ul li {
+    margin-top: 3px;
+  }
+
+  dl.message-details dd div.message-field-actions {
+    padding-left: 10px;
+    position: relative;
+    top: -10px;
   }
 
   dl.message-details-fields span:not(:last-child) dd {
@@ -1497,20 +1465,6 @@ const globalStyles = css`
     overflow: auto;
   }
 
-  dl.message-details dd.stream-list ul {
-    list-style-type: disc;
-    padding-left: 25px;
-  }
-
-  dl.message-details dd.stream-list ul li {
-    margin-top: 3px;
-  }
-
-  dl.message-details dd div.message-field-actions {
-    padding-left: 10px;
-    position: relative;
-    top: -10px;
-  }
   .greyed-out {
     opacity: 0.5;
     z-index: 20;
@@ -1531,15 +1485,6 @@ const globalStyles = css`
 
   nav.navbar-fixed-top ul.dropdown-menu li.divider {
     padding: 0;
-  }
-
-  .indexer-failures-body select.dynatable-per-page-select {
-    position: relative;
-    top: 0px;
-  }
-
-  table.indexer-failures {
-    margin-top: 10px;
   }
 
   div.row-sm {

@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
 import { Alert, Table } from 'components/graylog';
 import { Icon } from 'components/common';
 import { IndexerFailure } from 'components/indexers';
+
+const IndexerFailureTable = styled(Table)`
+  margin-top: 10px;
+`;
 
 class IndexerFailuresList extends React.Component {
   static propTypes = {
@@ -19,7 +24,7 @@ class IndexerFailuresList extends React.Component {
 
     return (
       <div className="scrollable-table">
-        <Table className="indexer-failures" striped hover condensed>
+        <IndexerFailureTable striped hover condensed>
           <thead>
             <tr>
               <th style={{ width: 200 }}>Timestamp</th>
@@ -31,7 +36,7 @@ class IndexerFailuresList extends React.Component {
           <tbody>
             {this.props.failures.map(failure => <IndexerFailure key={`indexer-failure-${failure.letter_id}`} failure={failure} />)}
           </tbody>
-        </Table>
+        </IndexerFailureTable>
       </div>
     );
   }

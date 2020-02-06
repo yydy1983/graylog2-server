@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Immutable from 'immutable';
 import { Link } from 'react-router';
+import styled from 'styled-components';
 
 import { Col, Label, Row } from 'components/graylog';
 import StreamLink from 'components/streams/StreamLink';
@@ -12,6 +13,21 @@ import Routes from 'routing/Routes';
 import MessageActions from './MessageActions';
 import MessageMetadata from './MessageMetadata';
 import NodeName from './NodeName';
+
+const MessageDetailsTitle = styled.h3`
+  height: 30px;
+
+  a {
+    color: #000;
+  }
+
+  .label {
+    font-size: 50%;
+    line-height: 200%;
+    margin-left: 5px;
+    vertical-align: bottom;
+  }
+`;
 
 class MessageDetail extends React.Component {
   static propTypes = {
@@ -148,11 +164,10 @@ class MessageDetail extends React.Component {
                             toggleShowOriginal={this._toggleShowOriginal}
                             searchConfig={searchConfig}
                             streams={allStreams} />
-            <h3 className="message-details-title">
-              <Icon name="envelope" />
-              &nbsp;
+            <MessageDetailsTitle>
+              <Icon name="envelope" />&nbsp;
               {messageTitle}
-            </h3>
+            </MessageDetailsTitle>
           </Col>
         </Row>
         <Row>
