@@ -1,6 +1,6 @@
 // @flow strict
 import Reflux from 'reflux';
-
+import URI from 'urijs';
 import fetch from 'logic/rest/FetchProvider';
 import ApiRoutes from 'routing/ApiRoutes';
 import URLUtils from 'util/URLUtils';
@@ -53,6 +53,18 @@ const ToolsStore = Reflux.createStore({
     promise.catch((errorThrown) => {
       UserNotification.error(`Details: ${errorThrown}`,
         'We were not able to run the JSON extraction. Please check your parameters.');
+    });
+
+    return promise;
+  },
+  testRegexValidity(regex: string): Promise<Object> {
+    const encodedRegex = URI.encode(regex);
+    const { url } = ApiRoutes.ToolsApiController.regexValidate(encodedRegex);
+    const promise = fetch('GET', URLUtils.qualifyUrl(url));
+
+    promise.catch((errorThrown) => {
+      UserNotification.error(`Details: ${errorThrown}`,
+        'Could not validate regular expression. Make sure that it is valid.');
     });
 
     return promise;

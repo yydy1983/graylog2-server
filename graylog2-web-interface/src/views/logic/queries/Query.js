@@ -1,6 +1,7 @@
 // @flow strict
 import Immutable, { is } from 'immutable';
 import uuid from 'uuid/v4';
+import { isEqual } from 'lodash';
 
 export type QueryId = string;
 
@@ -27,6 +28,23 @@ export type QueryJson = {
 export type ElasticsearchQueryString = {
   type: 'elasticsearch',
   query_string: string,
+};
+
+export const createElasticsearchQueryString = (query: string = ''): ElasticsearchQueryString => ({ type: 'elasticsearch', query_string: query });
+
+const _streamFilters = (selectedStreams: Array<string>): Array<{ type: string, id: string }> => {
+  return selectedStreams.map(stream => ({ type: 'stream', id: stream }));
+};
+
+export const filtersForQuery = (streams: ?Array<string>) => {
+  if (!streams || streams.length === 0) {
+    return null;
+  }
+  const streamFilters = _streamFilters(streams);
+  return {
+    type: 'or',
+    filters: streamFilters,
+  };
 };
 
 export type QueryString = ElasticsearchQueryString;
@@ -95,7 +113,7 @@ export default class Query {
       return false;
     }
 
-    if (this.id !== other.id || !is(this.query, other.query) || !is(this.timerange, other.timerange) || !is(this.filter, other.filter) || !is(this.searchTypes, other.searchTypes)) {
+    if (this.id !== other.id || !isEqual(this.query, other.query) || !isEqual(this.timerange, other.timerange) || !is(this.filter, other.filter) || !is(this.searchTypes, other.searchTypes)) {
       return false;
     }
 

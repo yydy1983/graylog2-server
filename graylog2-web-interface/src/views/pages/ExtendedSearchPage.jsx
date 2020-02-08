@@ -4,8 +4,11 @@ import type { ComponentType } from 'react';
 import PropTypes from 'prop-types';
 import * as Immutable from 'immutable';
 import styled, { css } from 'styled-components';
+import { withRouter } from 'react-router';
 
 import connect from 'stores/connect';
+import Footer from 'components/layout/Footer';
+
 import SideBar from 'views/components/sidebar/SideBar';
 import WithSearchStatus from 'views/components/WithSearchStatus';
 import SearchResult from 'views/components/SearchResult';
@@ -13,8 +16,8 @@ import type {
   SearchRefreshCondition,
   SearchRefreshConditionArguments,
 } from 'views/logic/hooks/SearchRefreshCondition';
-import Footer from 'components/layout/Footer';
 
+import { Grid } from 'components/graylog';
 import { FieldTypesStore, FieldTypesActions } from 'views/stores/FieldTypesStore';
 import { SearchStore, SearchActions } from 'views/stores/SearchStore';
 import { SearchExecutionStateStore } from 'views/stores/SearchExecutionStateStore';
@@ -36,11 +39,13 @@ import SearchBar from 'views/components/SearchBar';
 import CurrentViewTypeProvider from 'views/components/views/CurrentViewTypeProvider';
 import IfSearch from 'views/components/search/IfSearch';
 import { AdditionalContext } from 'views/logic/ActionContext';
+import IfInteractive from 'views/components/dashboard/IfInteractive';
+import InteractiveContext from 'views/components/contexts/InteractiveContext';
+import bindSearchParamsFromQuery from 'views/hooks/BindSearchParamsFromQuery';
+import { useSyncWithQueryParameters } from 'views/hooks/SyncWithQueryParameters';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import style from '!style/useable!css!./ExtendedSearchPage.css';
-import IfInteractive from '../components/dashboard/IfInteractive';
-import InteractiveContext from '../components/contexts/InteractiveContext';
 
 const GridContainer: ComponentType<{ interactive: boolean }> = styled.div`
   ${({ interactive }) => (interactive ? css`
@@ -51,12 +56,17 @@ const GridContainer: ComponentType<{ interactive: boolean }> = styled.div`
   ` : '')}
 `;
 
-const SearchGrid = styled.div`
-  z-index: 1;
-  padding: 15px;
+const SearchArea = styled.div`
   grid-area: search;
   grid-column-start: 2;
   grid-column-end: 4;
+  padding: 15px;
+
+  z-index: 1;
+`;
+
+const SearchGrid = styled(Grid)`
+  width: 100%;
 `;
 
 const ConnectedSideBar = connect(SideBar, { viewMetadata: ViewMetadataStore, searches: SearchStore },
@@ -81,6 +91,12 @@ const ConnectedFieldList = connect(FieldList, { fieldTypes: FieldTypesStore, vie
 type Props = {
   route: any,
   searchRefreshHooks: Array<SearchRefreshCondition>,
+  router: {
+    getCurrentLocation: () => ({ pathname: string, search: string }),
+  },
+  location?: {
+    query: { [string]: string },
+  },
 };
 
 const _searchRefreshConditionChain = (searchRefreshHooks, state: SearchRefreshConditionArguments) => {
@@ -106,14 +122,30 @@ const DashboardSearchBarWithStatus = WithSearchStatus(DashboardSearchBar);
 
 const ViewAdditionalContextProvider = connect(AdditionalContext.Provider, { view: ViewStore }, ({ view }) => ({ value: { view: view.view } }));
 
-const ExtendedSearchPage = ({ route, searchRefreshHooks }: Props) => {
+const useStyle = () => {
+  useEffect(() => {
+    style.use();
+    return () => style.unuse();
+  }, []);
+};
+
+const ExtendedSearchPage = ({ route, location = { query: {} }, router, searchRefreshHooks }: Props) => {
+  const { pathname, search } = router.getCurrentLocation();
+  const query = `${pathname}${search}`;
   const refreshIfNotUndeclared = () => _refreshIfNotUndeclared(searchRefreshHooks, SearchExecutionStateStore.getInitialState());
 
   useEffect(() => {
-    style.use();
+    const { view } = ViewStore.getInitialState();
 
+    bindSearchParamsFromQuery({ view, query: location.query, retry: () => Promise.resolve() });
+  }, [query]);
+
+  useStyle();
+
+  useEffect(() => {
     SearchConfigActions.refresh();
     FieldTypesActions.all();
+    StreamsActions.refresh();
 
     let storeListenersUnsubscribes = Immutable.List();
     refreshIfNotUndeclared().then(() => {
@@ -123,14 +155,11 @@ const ExtendedSearchPage = ({ route, searchRefreshHooks }: Props) => {
       return null;
     }, () => { });
 
-    StreamsActions.refresh();
-
     // Returning cleanup function used when unmounting
-    return () => {
-      style.unuse();
-      storeListenersUnsubscribes.forEach(unsubscribeFunc => unsubscribeFunc());
-    };
+    return () => storeListenersUnsubscribes.forEach(unsubscribeFunc => unsubscribeFunc());
   }, []);
+
+  useSyncWithQueryParameters(query);
 
   return (
     <CurrentViewTypeProvider>
@@ -147,25 +176,30 @@ const ExtendedSearchPage = ({ route, searchRefreshHooks }: Props) => {
                 <ConnectedFieldList />
               </ConnectedSideBar>
             </IfInteractive>
-            <SearchGrid>
-              <IfInteractive>
-                <HeaderElements />
-                <IfDashboard>
-                  <DashboardSearchBarWithStatus onExecute={refreshIfNotUndeclared} />
-                  <QueryBar />
-                </IfDashboard>
-                <IfSearch>
-                  <SearchBarWithStatus onExecute={refreshIfNotUndeclared} />
-                </IfSearch>
+            <SearchArea>
+              <SearchGrid>
+                <IfInteractive>
+                  <HeaderElements />
+                  <IfDashboard>
+                    <DashboardSearchBarWithStatus onExecute={refreshIfNotUndeclared} />
+                  </IfDashboard>
+                  <IfSearch>
+                    <SearchBarWithStatus onExecute={refreshIfNotUndeclared} />
+                  </IfSearch>
 
-                <QueryBarElements />
-              </IfInteractive>
+                  <QueryBarElements />
 
-              <ViewAdditionalContextProvider>
-                <SearchResult />
-              </ViewAdditionalContextProvider>
-              <Footer />
-            </SearchGrid>
+                  <IfDashboard>
+                    <QueryBar />
+                  </IfDashboard>
+                </IfInteractive>
+
+                <ViewAdditionalContextProvider>
+                  <SearchResult />
+                </ViewAdditionalContextProvider>
+                <Footer />
+              </SearchGrid>
+            </SearchArea>
           </GridContainer>
         )}
       </InteractiveContext.Consumer>
@@ -175,11 +209,29 @@ const ExtendedSearchPage = ({ route, searchRefreshHooks }: Props) => {
 
 ExtendedSearchPage.propTypes = {
   route: PropTypes.object.isRequired,
+  location: PropTypes.shape({
+    query: PropTypes.object.isRequired,
+  }),
+  router: PropTypes.object,
   searchRefreshHooks: PropTypes.arrayOf(PropTypes.func).isRequired,
+};
+
+ExtendedSearchPage.defaultProps = {
+  location: { query: {} },
+  router: {
+    getCurrentLocation: () => ({ pathname: '', search: '' }),
+    push: () => {},
+    replace: () => {},
+    go: () => {},
+    goBack: () => {},
+    goForward: () => {},
+    setRouteLeaveHook: () => {},
+    isActive: () => {},
+  },
 };
 
 const mapping = {
   searchRefreshHooks: 'views.hooks.searchRefresh',
 };
 
-export default withPluginEntities<Props, typeof mapping>(ExtendedSearchPage, mapping);
+export default withPluginEntities<$Rest<Props, {| router: any |}>, typeof mapping>(withRouter(ExtendedSearchPage), mapping);

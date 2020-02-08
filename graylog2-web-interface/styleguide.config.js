@@ -11,7 +11,6 @@ module.exports = {
     'toastr/toastr.less',
     'rickshaw/rickshaw.css',
     'stylesheets/typeahead.less',
-    'stylesheets/graylog2.less',
     'injection/builtins.js',
   ],
   sections: [
@@ -22,6 +21,23 @@ module.exports = {
     {
       name: 'Style guide',
       content: 'docs/styleguide.md',
+    },
+    {
+      name: 'Theming Details',
+      sections: [
+        {
+          name: 'ThemeProvider',
+          content: 'src/theme/docs/ThemeProvider.md',
+        },
+        {
+          name: 'Colors',
+          content: 'src/theme/docs/Colors.md',
+        },
+        {
+          name: 'Color Utilities',
+          content: 'src/theme/docs/Utilities.md',
+        },
+      ],
     },
     {
       name: 'Documentation',

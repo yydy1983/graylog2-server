@@ -15,7 +15,9 @@ export type PluginMetadata = {
 export type Requirements = { [string]: PluginMetadata };
 export type ViewStateMap = Immutable.Map<QueryId, ViewState>;
 
-export type ViewType = 'SEARCH' | 'DASHBOARD';
+export type SearchType = 'SEARCH';
+export type DashboardType = 'DASHBOARD';
+export type ViewType = SearchType | DashboardType;
 
 type InternalState = {
   id: string,
@@ -47,7 +49,7 @@ export type ViewJson = {
 };
 
 export default class View {
-  static Type: { [string]: ViewType } = {
+  static Type: { Search: SearchType, Dashboard: DashboardType } = {
     Search: 'SEARCH',
     Dashboard: 'DASHBOARD',
   };
@@ -130,7 +132,7 @@ export default class View {
   }
 
   get requires(): Requirements {
-    return this._value.requires;
+    return this._value.requires || {};
   }
 
   // eslint-disable-next-line no-use-before-define

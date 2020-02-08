@@ -1,6 +1,6 @@
 // @flow strict
 import * as React from 'react';
-import { mount } from 'enzyme';
+import { mount } from 'wrappedEnzyme';
 
 import Routes from 'routing/Routes';
 import history from 'util/History';
@@ -110,5 +110,27 @@ describe('ShowViewPage', () => {
     mount(<SimpleShowViewPage viewLoader={viewLoader} />);
 
     expect(viewLoader).toHaveBeenCalled();
+  });
+  it('calls ViewLoader again if view id prop changes', () => {
+    const viewLoader = jest.fn(() => Promise.resolve());
+    const wrapper = mount(<SimpleShowViewPage viewLoader={viewLoader} />);
+
+    expect(viewLoader).toHaveBeenCalledWith('foo', [], [], {}, expect.anything(), expect.anything());
+
+    wrapper.setProps({ params: { viewId: 'bar' } });
+
+    expect(viewLoader).toHaveBeenCalledWith('bar', [], [], {}, expect.anything(), expect.anything());
+  });
+  it('does not call ViewLoader again if view id prop does not change', () => {
+    const viewLoader = jest.fn(() => Promise.resolve());
+    const wrapper = mount(<SimpleShowViewPage viewLoader={viewLoader} />);
+
+    expect(viewLoader).toHaveBeenCalledWith('foo', [], [], {}, expect.anything(), expect.anything());
+
+    viewLoader.mockClear();
+
+    wrapper.setProps({ params: { viewId: 'foo' } });
+
+    expect(viewLoader).not.toHaveBeenCalled();
   });
 });
