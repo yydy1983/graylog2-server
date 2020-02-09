@@ -489,11 +489,6 @@ const globalStyles = css`
     font-size: 12px;
   }
 
-  .rickshaw_graph .x_tick {
-    position: relative;
-    top: 38px;
-  }
-
   .graph-resolution-selector {
     margin-top: 5px;
     margin-bottom: 20px;
@@ -864,31 +859,11 @@ const globalStyles = css`
     pointer-events: none;
   }
 
-  .rickshaw_graph:active,
-  .rickshaw_graph:focus,
-  .rickshaw_graph *:active,
-  .rickshaw_graph *:focus {
-    cursor: crosshair !important;
-  }
-
-  .rickshaw_graph .detail .x_label {
-    display: none;
-  }
-
-  .rickshaw_graph .detail .item {
-    line-height: 1.4;
-    padding: 0.5em;
-  }
-
   .detail_swatch {
     display: inline-block;
     width: 10px;
     height: 10px;
     margin: 0 4px 0 0;
-  }
-
-  .rickshaw_graph .detail .date {
-    color: #a0a0a0;
   }
 
   .input-io .total {
