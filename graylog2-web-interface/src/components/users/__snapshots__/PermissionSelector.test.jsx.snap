@@ -716,11 +716,39 @@ exports[`<PermissionSelector /> should render with empty permissions 1`] = `
                                                 </Button>
                                               </ForwardRef>
                                             </form>
-                                            <ul
-                                              className="pill-list"
-                                            >
-                                              <Component />
-                                            </ul>
+                                            <TypeAheadDataFilter__PillList>
+                                              <StyledComponent
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                      "isStatic": true,
+                                                      "lastClassName": "hcdcMs",
+                                                      "rules": Array [
+                                                        "display:inline-block;list-style:none;padding:0;position:relative;margin-left:10px;vertical-align:middle;> li{display:inline-block;vertical-align:middle;}",
+                                                      ],
+                                                    },
+                                                    "displayName": "TypeAheadDataFilter__PillList",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                    "target": "ul",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                              >
+                                                <ul
+                                                  className="TypeAheadDataFilter__PillList-n0qtw5-0 hcdcMs"
+                                                >
+                                                  <Component />
+                                                </ul>
+                                              </StyledComponent>
+                                            </TypeAheadDataFilter__PillList>
                                           </div>
                                         </TypeAheadDataFilter>
                                       </div>
@@ -2056,11 +2084,39 @@ exports[`<PermissionSelector /> should render with empty permissions 1`] = `
                                                 </Button>
                                               </ForwardRef>
                                             </form>
-                                            <ul
-                                              className="pill-list"
-                                            >
-                                              <Component />
-                                            </ul>
+                                            <TypeAheadDataFilter__PillList>
+                                              <StyledComponent
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                      "isStatic": true,
+                                                      "lastClassName": "hcdcMs",
+                                                      "rules": Array [
+                                                        "display:inline-block;list-style:none;padding:0;position:relative;margin-left:10px;vertical-align:middle;> li{display:inline-block;vertical-align:middle;}",
+                                                      ],
+                                                    },
+                                                    "displayName": "TypeAheadDataFilter__PillList",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                    "target": "ul",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                              >
+                                                <ul
+                                                  className="TypeAheadDataFilter__PillList-n0qtw5-0 hcdcMs"
+                                                >
+                                                  <Component />
+                                                </ul>
+                                              </StyledComponent>
+                                            </TypeAheadDataFilter__PillList>
                                           </div>
                                         </TypeAheadDataFilter>
                                       </div>
@@ -3639,11 +3695,39 @@ exports[`<PermissionSelector /> should render with set permissions 1`] = `
                                                 </Button>
                                               </ForwardRef>
                                             </form>
-                                            <ul
-                                              className="pill-list"
-                                            >
-                                              <Component />
-                                            </ul>
+                                            <TypeAheadDataFilter__PillList>
+                                              <StyledComponent
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                      "isStatic": true,
+                                                      "lastClassName": "hcdcMs",
+                                                      "rules": Array [
+                                                        "display:inline-block;list-style:none;padding:0;position:relative;margin-left:10px;vertical-align:middle;> li{display:inline-block;vertical-align:middle;}",
+                                                      ],
+                                                    },
+                                                    "displayName": "TypeAheadDataFilter__PillList",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                    "target": "ul",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                              >
+                                                <ul
+                                                  className="TypeAheadDataFilter__PillList-n0qtw5-0 hcdcMs"
+                                                >
+                                                  <Component />
+                                                </ul>
+                                              </StyledComponent>
+                                            </TypeAheadDataFilter__PillList>
                                           </div>
                                         </TypeAheadDataFilter>
                                       </div>
@@ -4979,11 +5063,39 @@ exports[`<PermissionSelector /> should render with set permissions 1`] = `
                                                 </Button>
                                               </ForwardRef>
                                             </form>
-                                            <ul
-                                              className="pill-list"
-                                            >
-                                              <Component />
-                                            </ul>
+                                            <TypeAheadDataFilter__PillList>
+                                              <StyledComponent
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                      "isStatic": true,
+                                                      "lastClassName": "hcdcMs",
+                                                      "rules": Array [
+                                                        "display:inline-block;list-style:none;padding:0;position:relative;margin-left:10px;vertical-align:middle;> li{display:inline-block;vertical-align:middle;}",
+                                                      ],
+                                                    },
+                                                    "displayName": "TypeAheadDataFilter__PillList",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                                                    "target": "ul",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
+                                                  }
+                                                }
+                                                forwardedRef={null}
+                                              >
+                                                <ul
+                                                  className="TypeAheadDataFilter__PillList-n0qtw5-0 hcdcMs"
+                                                >
+                                                  <Component />
+                                                </ul>
+                                              </StyledComponent>
+                                            </TypeAheadDataFilter__PillList>
                                           </div>
                                         </TypeAheadDataFilter>
                                       </div>

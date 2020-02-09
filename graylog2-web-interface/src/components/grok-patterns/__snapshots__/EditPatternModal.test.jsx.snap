@@ -68,7 +68,7 @@ exports[`<EditPatternModal /> should render a modal button with as create 1`] = 
                 "componentStyle": ComponentStyle {
                   "componentId": "Modal-nuree8-0",
                   "isStatic": true,
-                  "lastClassName": "cHlGak",
+                  "lastClassName": "bmCcvm",
                   "rules": Array [
                     ".modal-content{background-color:",
                     "#FFF",
@@ -78,7 +78,7 @@ exports[`<EditPatternModal /> should render a modal button with as create 1`] = 
                     "#DCE1E5",
                     ";}.modal-footer{border-top-color:",
                     "#DCE1E5",
-                    ";}}",
+                    ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                   ],
                 },
                 "displayName": "Modal",
@@ -101,7 +101,7 @@ exports[`<EditPatternModal /> should render a modal button with as create 1`] = 
               backdrop="static"
               bsClass="modal"
               bsSize="large"
-              className="Modal-nuree8-0 cHlGak"
+              className="Modal-nuree8-0 bmCcvm"
               dialogComponentClass={[Function]}
               enforceFocus={true}
               keyboard={true}
@@ -230,7 +230,7 @@ exports[`<EditPatternModal /> should render a modal button with as edit 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "Modal-nuree8-0",
                   "isStatic": true,
-                  "lastClassName": "cHlGak",
+                  "lastClassName": "bmCcvm",
                   "rules": Array [
                     ".modal-content{background-color:",
                     "#FFF",
@@ -240,7 +240,7 @@ exports[`<EditPatternModal /> should render a modal button with as edit 1`] = `
                     "#DCE1E5",
                     ";}.modal-footer{border-top-color:",
                     "#DCE1E5",
-                    ";}}",
+                    ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                   ],
                 },
                 "displayName": "Modal",
@@ -263,7 +263,7 @@ exports[`<EditPatternModal /> should render a modal button with as edit 1`] = `
               backdrop="static"
               bsClass="modal"
               bsSize="large"
-              className="Modal-nuree8-0 cHlGak"
+              className="Modal-nuree8-0 bmCcvm"
               dialogComponentClass={[Function]}
               enforceFocus={true}
               keyboard={true}

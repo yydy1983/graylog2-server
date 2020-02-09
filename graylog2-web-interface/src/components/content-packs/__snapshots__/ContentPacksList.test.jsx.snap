@@ -675,11 +675,39 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                     </Button>
                   </ForwardRef>
                 </form>
-                <ul
-                  className="pill-list"
-                >
-                  <Component />
-                </ul>
+                <TypeAheadDataFilter__PillList>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                          "isStatic": true,
+                          "lastClassName": "hcdcMs",
+                          "rules": Array [
+                            "display:inline-block;list-style:none;padding:0;position:relative;margin-left:10px;vertical-align:middle;> li{display:inline-block;vertical-align:middle;}",
+                          ],
+                        },
+                        "displayName": "TypeAheadDataFilter__PillList",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                        "target": "ul",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <ul
+                      className="TypeAheadDataFilter__PillList-n0qtw5-0 hcdcMs"
+                    >
+                      <Component />
+                    </ul>
+                  </StyledComponent>
+                </TypeAheadDataFilter__PillList>
               </div>
             </TypeAheadDataFilter>
           </div>
@@ -1346,7 +1374,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -1356,7 +1384,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -1379,7 +1407,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -1805,7 +1833,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -1815,7 +1843,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -1838,7 +1866,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -2199,7 +2227,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -2209,7 +2237,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -2232,7 +2260,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -2658,7 +2686,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -2668,7 +2696,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -2691,7 +2719,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -2984,7 +3012,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -2994,7 +3022,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -3017,7 +3045,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -3443,7 +3471,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -3453,7 +3481,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -3476,7 +3504,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -3768,7 +3796,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -3778,7 +3806,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -3801,7 +3829,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -4227,7 +4255,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -4237,7 +4265,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -4260,7 +4288,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -4553,7 +4581,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -4563,7 +4591,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -4586,7 +4614,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -5012,7 +5040,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -5022,7 +5050,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -5045,7 +5073,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -5338,7 +5366,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -5348,7 +5376,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -5371,7 +5399,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -5797,7 +5825,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -5807,7 +5835,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -5830,7 +5858,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -6123,7 +6151,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -6133,7 +6161,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -6156,7 +6184,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -6582,7 +6610,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -6592,7 +6620,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -6615,7 +6643,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -6908,7 +6936,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -6918,7 +6946,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -6941,7 +6969,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -7367,7 +7395,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -7377,7 +7405,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -7400,7 +7428,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -7692,7 +7720,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -7702,7 +7730,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -7725,7 +7753,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -8151,7 +8179,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -8161,7 +8189,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -8184,7 +8212,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -8477,7 +8505,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "Modal-nuree8-0",
                                               "isStatic": true,
-                                              "lastClassName": "cHlGak",
+                                              "lastClassName": "bmCcvm",
                                               "rules": Array [
                                                 ".modal-content{background-color:",
                                                 "#FFF",
@@ -8487,7 +8515,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                 "#DCE1E5",
                                                 ";}.modal-footer{border-top-color:",
                                                 "#DCE1E5",
-                                                ";}}",
+                                                ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                               ],
                                             },
                                             "displayName": "Modal",
@@ -8510,7 +8538,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                           backdrop="static"
                                           bsClass="modal"
                                           bsSize="large"
-                                          className="Modal-nuree8-0 cHlGak"
+                                          className="Modal-nuree8-0 bmCcvm"
                                           dialogComponentClass={[Function]}
                                           enforceFocus={true}
                                           keyboard={true}
@@ -8936,7 +8964,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "Modal-nuree8-0",
                                                 "isStatic": true,
-                                                "lastClassName": "cHlGak",
+                                                "lastClassName": "bmCcvm",
                                                 "rules": Array [
                                                   ".modal-content{background-color:",
                                                   "#FFF",
@@ -8946,7 +8974,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                                   "#DCE1E5",
                                                   ";}.modal-footer{border-top-color:",
                                                   "#DCE1E5",
-                                                  ";}}",
+                                                  ";}}.modal-title{font-size:21px;}.modal-dialog{margin-top:55px;}.modal-backdrop{height:100000%;z-index:1030;}form{margin-bottom:0;}.modal-body .form-group{margin-bottom:5px;}",
                                                 ],
                                               },
                                               "displayName": "Modal",
@@ -8969,7 +8997,7 @@ exports[`<ContentPacksList /> should render with content packs 1`] = `
                                             backdrop="static"
                                             bsClass="modal"
                                             bsSize="large"
-                                            className="Modal-nuree8-0 cHlGak"
+                                            className="Modal-nuree8-0 bmCcvm"
                                             dialogComponentClass={[Function]}
                                             enforceFocus={true}
                                             keyboard={true}
@@ -9845,11 +9873,39 @@ exports[`<ContentPacksList /> should render with empty content packs 1`] = `
                     </Button>
                   </ForwardRef>
                 </form>
-                <ul
-                  className="pill-list"
-                >
-                  <Component />
-                </ul>
+                <TypeAheadDataFilter__PillList>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                          "isStatic": true,
+                          "lastClassName": "hcdcMs",
+                          "rules": Array [
+                            "display:inline-block;list-style:none;padding:0;position:relative;margin-left:10px;vertical-align:middle;> li{display:inline-block;vertical-align:middle;}",
+                          ],
+                        },
+                        "displayName": "TypeAheadDataFilter__PillList",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "TypeAheadDataFilter__PillList-n0qtw5-0",
+                        "target": "ul",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                  >
+                    <ul
+                      className="TypeAheadDataFilter__PillList-n0qtw5-0 hcdcMs"
+                    >
+                      <Component />
+                    </ul>
+                  </StyledComponent>
+                </TypeAheadDataFilter__PillList>
               </div>
             </TypeAheadDataFilter>
           </div>
