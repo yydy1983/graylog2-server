@@ -38,6 +38,13 @@ const NodeHeap = styled.div`
   }
 `;
 
+const Blob = styled.span`
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-left: 2px;
+`;
+
 const JvmHeapUsage = createReactClass({
   displayName: 'JvmHeapUsage',
 
@@ -93,13 +100,13 @@ const JvmHeapUsage = createReactClass({
         detail = (
           <p>
             The JVM is using{' '}
-            <span className="blob used-memory" />
+            <Blob className="used-memory" />
             <strong> {NumberUtils.formatBytes(metrics.usedMemory)}</strong>
             {' '}of{' '}
-            <span className="blob committed-memory" />
+            <Blob className="committed-memory" />
             <strong> {NumberUtils.formatBytes(metrics.committedMemory)}</strong>
             {' '}heap space and will not attempt to use more than{' '}
-            <span className="blob max-memory" style={{ border: '1px solid #ccc' }} />
+            <Blob className="max-memory" style={{ border: '1px solid #ccc' }} />
             <strong> {NumberUtils.formatBytes(metrics.maxMemory)}</strong>
           </p>
         );

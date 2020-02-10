@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
-import { Row, Col } from 'components/graylog';
+import styled from 'styled-components';
 
+import { Row, Col } from 'components/graylog';
 import { DocumentTitle, PageHeader, Spinner } from 'components/common';
 
 import StoreProvider from 'injection/StoreProvider';
@@ -17,6 +18,10 @@ const ClusterOverviewStore = StoreProvider.getStore('ClusterOverview');
 function nodeFilter(state) {
   return state.nodes ? state.nodes[this.props.params.nodeId] : state.nodes;
 }
+
+const ThreadDump = styled.pre`
+  font-size: 11px;
+`;
 
 const ThreadDumpPage = createReactClass({
   displayName: 'ThreadDumpPage',
@@ -48,7 +53,7 @@ const ThreadDumpPage = createReactClass({
       </span>
     );
 
-    const threadDump = this.state.threadDump ? <pre className="threaddump">{this.state.threadDump}</pre> : <Spinner />;
+    const threadDump = this.state.threadDump ? <ThreadDump>{this.state.threadDump}</ThreadDump> : <Spinner />;
 
     return (
       <DocumentTitle title={`Thread dump of node ${this.state.node.short_node_id} / ${this.state.node.hostname}`}>

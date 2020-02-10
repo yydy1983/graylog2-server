@@ -44,6 +44,11 @@ const JournalDetailsCol = styled(Col)`
 
     .progress-bar {
       min-width: 3em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4), 2px -1px 3px rgba(255,255,255,0.5);
+
+      span {
+        margin-left: 1px;
+      }
     }
   }
 `;

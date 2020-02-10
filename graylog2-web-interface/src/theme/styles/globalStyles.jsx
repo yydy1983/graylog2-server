@@ -380,15 +380,6 @@ const globalStyles = css`
     margin-top: 5px;
   }
 
-  .node-buffer-usage .progress-bar,
-  .journal-details-usage .progress-bar {
-    text-shadow: 0 1px 2px rgba(0,0,0,0.4), 2px -1px 3px rgba(255,255,255,0.5);
-
-    span {
-      margin-left: 1px;
-    }
-  }
-
   .search-help {
     margin: 0 5px;
     line-height: 34px;
@@ -414,11 +405,6 @@ const globalStyles = css`
 
   .alerts th a:focus {
     color: #fff;
-  }
-
-  .annotation .content {
-    margin-bottom: 10px;
-    cursor: auto !important;
   }
 
   .well.configuration-well {
@@ -497,44 +483,8 @@ const globalStyles = css`
     margin: 0;
   }
 
-  .card .configuration-bundles .bundle-preview {
-    border: 1px solid #ececec;
-    border-radius: 2px;
-    background-color: #ffffff;
-    padding: 20px;
-  }
-
-  .card .configuration-bundles .bundle-preview pre {
-    background-color: #f5f5f5;
-  }
-
-  .bundle-preview ul, .bundle-preview ol {
-    margin: 0px 0px 10px 25px;
-  }
-
-  .bundle-preview ul {
-    list-style-type: circle;
-  }
-
-  .build-content-pack button.select-all {
-    margin-top: 7px;
-    padding: 0;
-  }
-
-  #react-configuration-bundles {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 20px;
-    margin-top: 15px;
-  }
-
   .form-inline label {
     margin-right: 10px;
-  }
-
-  .form-horizontal .help-block.help-standalone {
-    line-height: 20px;
-    margin-top: 7px;
   }
 
   .form-horizontal.pull-left label.control-label {
@@ -563,16 +513,9 @@ const globalStyles = css`
     display: inline-block;
   }
 
-  table th.actions, table td.actions {
+  table th.actions,
+  table td.actions {
     width: 110px;
-  }
-
-  #grok-pattern-list th.name {
-    min-width: 200px;
-  }
-
-  #grok-pattern-list td {
-    word-break: break-all;
   }
 
   .btn-text {
@@ -622,49 +565,6 @@ const globalStyles = css`
 
   ul.streams li.stream .stream-data .stream-actions .btn-delete.last {
     margin-right: 0;
-  }
-
-  ul.entity-list {
-    padding: 0;
-    margin: 0;
-
-    li.entity-list-item {
-      display: block;
-      padding: 15px 0px;
-
-      h2 .label {
-        margin-left: 5px;
-        line-height: 2;
-        vertical-align: bottom;
-      }
-
-      .item-description {
-        min-height: 17px;
-        margin: 5px 0;
-      }
-
-      .item-actions > .btn, .item-actions > .btn-group, .item-actions > span > .btn {
-        margin-left: 5px;
-        margin-bottom: 5px;
-      }
-    }
-
-    li.entity-list-item:not(:last-child) {
-      border-bottom: 1px solid #6dcff6;
-    }
-  }
-
-  .breadcrumb {
-    margin-bottom: 10px !important;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-
-  span.blob {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    margin-left: 2px;
   }
 
   dl.message-details {
@@ -719,10 +619,6 @@ const globalStyles = css`
     margin-bottom: 5px;
   }
 
-  .node-buffer-usage .progress {
-    margin-bottom: 5px;
-  }
-
   .progress-bar {
     max-width: 100%;
   }
@@ -754,14 +650,6 @@ const globalStyles = css`
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ececec;
-  }
-
-  .threaddump {
-    font-size: 11px;
-  }
-
-  .stream-description .fa-cube {
-    margin-right: 5px;
   }
 
   .content-head .btn-lg {

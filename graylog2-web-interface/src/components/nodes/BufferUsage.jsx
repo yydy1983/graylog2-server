@@ -18,6 +18,14 @@ const MetricsActions = ActionsProvider.getActions('Metrics');
 const NodeBufferUsage = styled.div`
   margin-top: 10px;
   margin-bottom: 7px;
+
+  .progress-bar {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4), 2px -1px 3px rgba(255,255,255,0.5);
+
+    span {
+      margin-left: 1px;
+    }
+  }
 `;
 
 const BufferUsage = createReactClass({
