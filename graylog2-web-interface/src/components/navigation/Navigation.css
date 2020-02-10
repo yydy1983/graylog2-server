@@ -12,6 +12,23 @@
   margin: 0 10px;
 }
 
+nav.navbar-fixed-top ul.dropdown-menu li a {
+  font-size: 12px;
+}
+
+nav.navbar-fixed-top ul.dropdown-menu {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav.navbar-fixed-top ul.dropdown-menu li {
+  padding: 2px 2px 2px 0;
+}
+
+nav.navbar-fixed-top ul.dropdown-menu li.divider {
+  padding: 0;
+}
+
 @media (max-width: 991px) {
   :local(.header-meta-nav) {
     border-top: 1px solid #d0d0d0;

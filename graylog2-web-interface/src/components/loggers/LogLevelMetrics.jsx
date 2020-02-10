@@ -5,11 +5,27 @@ import Reflux from 'reflux';
 import { Col } from 'components/graylog';
 import lodash from 'lodash';
 import numeral from 'numeral';
+import styled from 'styled-components';
 
 import { Spinner } from 'components/common';
 import CombinedProvider from 'injection/CombinedProvider';
 
 const { MetricsStore, MetricsActions } = CombinedProvider.get('Metrics');
+
+const LogLevelMetricsRow = styled.div`
+  margin-top: 2px;
+  margin-left: 10px;
+`;
+
+const LogLevelMetricsList = styled.dl`
+  margin-bottom: 5px;
+  margin-top: 5px;
+`;
+
+const LogLevelMetricsData = styled.dt`
+  float: left;
+  margin-right: 5px;
+`;
 
 const LogLevelMetrics = createReactClass({
   displayName: 'LogLevelMetrics',
@@ -42,23 +58,23 @@ const LogLevelMetrics = createReactClass({
     } else {
       const { metric } = metrics[nodeId][this._metricName()];
       metricsDetails = (
-        <dl className="loglevel-metrics-list">
-          <dt>Total written:</dt>
+        <LogLevelMetricsList>
+          <LogLevelMetricsData>Total written:</LogLevelMetricsData>
           <dd><span className="loglevel-metric-total">{metric.rate.total}</span></dd>
-          <dt>Mean rate:</dt>
+          <LogLevelMetricsData>Mean rate:</LogLevelMetricsData>
           <dd><span className="loglevel-metric-mean">{numeral(metric.rate.mean).format('0.00')}</span> / second</dd>
-          <dt>1 min rate:</dt>
+          <LogLevelMetricsData>1 min rate:</LogLevelMetricsData>
           <dd><span className="loglevel-metric-1min">{numeral(metric.rate.one_minute).format('0.00')}</span> / second</dd>
-        </dl>
+        </LogLevelMetricsList>
       );
     }
     return (
-      <div className="loglevel-metrics-row">
+      <LogLevelMetricsRow>
         <Col md={4}>
           <h3 className="u-light">Level: {lodash.capitalize(loglevel)}</h3>
           {metricsDetails}
         </Col>
-      </div>
+      </LogLevelMetricsRow>
     );
   },
 });

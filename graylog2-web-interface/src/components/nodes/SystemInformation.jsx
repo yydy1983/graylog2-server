@@ -2,10 +2,24 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import createReactClass from 'create-react-class';
 import moment from 'moment';
+import styled from 'styled-components';
 
 import { Timestamp } from 'components/common';
 
 import DateTime from 'logic/datetimes/DateTime';
+
+const SystemInfoList = styled.dl`
+  margin-top: 5px;
+  margin-bottom: 0px;
+
+  dt {
+    float: left;
+  }
+
+  dd {
+    margin-left: 75px;
+  }
+`;
 
 const SystemInformation = createReactClass({
   displayName: 'SystemInformation',
@@ -38,7 +52,7 @@ const SystemInformation = createReactClass({
     }
 
     return (
-      <dl className="system-system">
+      <SystemInfoList>
         <dt>Hostname:</dt>
         <dd>{systemInformation.hostname}</dd>
         <dt>Node ID:</dt>
@@ -48,8 +62,10 @@ const SystemInformation = createReactClass({
         <dt>JVM:</dt>
         <dd>{jvmInformation}</dd>
         <dt>Time:</dt>
-        <dd><Timestamp dateTime={this.state.time} format={DateTime.Formats.DATETIME_TZ} tz={systemInformation.timezone} /></dd>
-      </dl>
+        <dd>
+          <Timestamp dateTime={this.state.time} format={DateTime.Formats.DATETIME_TZ} tz={systemInformation.timezone} />
+        </dd>
+      </SystemInfoList>
     );
   },
 });

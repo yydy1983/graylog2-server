@@ -1,7 +1,7 @@
 ```js { "props": { "className": "container" } }
 const styles = ['Primary', 'Danger', 'Warning', 'Success', 'Info', 'Default'];
 
-<table className="table table-sm table-striped">
+<table className="table table-striped">
   <tbody>
     {styles.map((style, i) => {
       return (

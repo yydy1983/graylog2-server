@@ -3,6 +3,7 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
 import { Link } from 'react-router';
+import styled, { css } from 'styled-components';
 
 import StoreProvider from 'injection/StoreProvider';
 
@@ -11,6 +12,10 @@ import Icon from './Icon';
 import Spinner from './Spinner';
 
 const NodesStore = StoreProvider.getStore('Nodes');
+
+const NodeIcon = styled(Icon)(({ isMaster }) => css`
+  color: ${isMaster ? '#f89406' : 'inherit'};
+`);
 
 /**
  * Component that creates a link to a Graylog node. The information in the link includes:
@@ -38,11 +43,10 @@ const LinkToNode = createReactClass({
 
     if (node) {
       const iconName = node.is_master ? 'star' : 'code-fork';
-      const iconClass = node.is_master ? 'master-node' : '';
       const iconTitle = node.is_master ? 'This is the master node in the cluster' : '';
       return (
         <Link to={Routes.SYSTEM.NODES.SHOW(this.props.nodeId)}>
-          <Icon name={iconName} className={iconClass} title={iconTitle} />
+          <NodeIcon name={iconName} isMaster={node.is_master} title={iconTitle} />
           {' '}
           {node.short_node_id} / {node.hostname}
         </Link>

@@ -4,6 +4,7 @@ import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
 import URI from 'urijs';
 import naturalSort from 'javascript-natural-sort';
+import styled from 'styled-components';
 
 import { Row, Col, Panel, FormGroup, ControlLabel, Button } from 'components/graylog';
 import { Input, InputWrapper } from 'components/bootstrap';
@@ -17,10 +18,14 @@ import TestLdapConnection from './TestLdapConnection';
 import TestLdapLogin from './TestLdapLogin';
 import LdapComponentStyle from './LdapComponent.css';
 
-
 const RolesStore = StoreProvider.getStore('Roles');
 const LdapStore = StoreProvider.getStore('Ldap');
 const LdapActions = ActionsProvider.getActions('Ldap');
+
+const InputGroupSeperator = styled.span`
+  border-right-width: 0;
+  border-left-width: 0;
+`;
 
 const HelperText = {
   activeDirectory: {
@@ -87,7 +92,7 @@ const HelperText = {
     SEARCH_BASE: (
       <span>
         The base tree to limit the LDAP search query to, e.g. <code className="text-nowrap">cn=users,dc=example,dc=com
-        </code>.
+                                                              </code>.
       </span>
     ),
     SEARCH_PATTERN: (
@@ -353,7 +358,7 @@ const LdapComponent = createReactClass({
                          required
                          onChange={ev => this._setUriHost(ev.target.value)}
                          disabled={disabled} />
-                  <span className="input-group-addon input-group-separator">:</span>
+                  <InputGroupSeperator className="input-group-addon">:</InputGroupSeperator>
                   <input type="number"
                          className="form-control"
                          id="ldap-uri-port"

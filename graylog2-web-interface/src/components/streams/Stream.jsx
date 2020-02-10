@@ -3,6 +3,7 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import { Link } from 'react-router';
 import { LinkContainer } from 'react-router-bootstrap';
+import styled from 'styled-components';
 
 import { Button, Tooltip } from 'components/graylog';
 import { OverlayElement, Icon } from 'components/common';
@@ -21,6 +22,14 @@ import style from './Stream.css';
 
 const StreamsStore = StoreProvider.getStore('Streams');
 const StreamRulesStore = StoreProvider.getStore('StreamRules');
+
+const ToggleStreamButton = styled(Button)`
+  width: 8.5em;
+`;
+
+const StreamDescription = styled.div`
+  margin-bottom: 3px;
+`;
 
 const Stream = createReactClass({
   displayName: 'Stream',
@@ -136,23 +145,21 @@ const Stream = createReactClass({
       if (stream.disabled) {
         toggleStreamLink = (
           <OverlayElement overlay={defaultStreamTooltip} placement="top" useOverlay={isDefaultStream}>
-            <Button bsStyle="success"
-                    className="toggle-stream-button"
-                    onClick={this._onResume}
-                    disabled={isDefaultStream || loading}>
+            <ToggleStreamButton bsStyle="success"
+                                onClick={this._onResume}
+                                disabled={isDefaultStream || loading}>
               {loading ? 'Starting...' : 'Start Stream'}
-            </Button>
+            </ToggleStreamButton>
           </OverlayElement>
         );
       } else {
         toggleStreamLink = (
           <OverlayElement overlay={defaultStreamTooltip} placement="top" useOverlay={isDefaultStream}>
-            <Button bsStyle="primary"
-                    className="toggle-stream-button"
-                    onClick={this._onPause}
-                    disabled={isDefaultStream || loading}>
+            <ToggleStreamButton bsStyle="primary"
+                                onClick={this._onPause}
+                                disabled={isDefaultStream || loading}>
               {loading ? 'Pausing...' : 'Pause Stream'}
-            </Button>
+            </ToggleStreamButton>
           </OverlayElement>
         );
       }
@@ -196,11 +203,11 @@ const Stream = createReactClass({
         </h2>
 
         <div className="stream-data">
-          <div className="stream-description">
+          <StreamDescription>
             {createdFromContentPack}
 
             {stream.description}
-          </div>
+          </StreamDescription>
           <StreamMetaData stream={stream}
                           streamRuleTypes={streamRuleTypes}
                           permissions={permissions}

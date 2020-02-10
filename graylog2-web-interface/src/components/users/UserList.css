@@ -44,3 +44,7 @@
 #user-list {
    overflow-x: visible;
 }
+
+#user-list th.user-type {
+    width: 50px;
+  }

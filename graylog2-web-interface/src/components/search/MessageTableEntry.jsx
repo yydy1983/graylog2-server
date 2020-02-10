@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Immutable from 'immutable';
 import ImmutablePropTypes from 'react-immutable-proptypes';
+import styled from 'styled-components';
 
 import { Popover, OverlayTrigger } from 'components/graylog';
 import { Timestamp, Icon } from 'components/common';
@@ -10,6 +11,10 @@ import DateTime from 'logic/datetimes/DateTime';
 import DecorationStats from 'logic/message/DecorationStats';
 import MessageDetail from './MessageDetail';
 import style from './MessageTableEntry.css';
+
+const ColoredHighlightResults = styled.span`
+  background-color: #ffec3d;
+`;
 
 class MessageTableEntry extends React.Component {
   static propTypes = {
@@ -84,7 +89,11 @@ class MessageTableEntry extends React.Component {
           if (position !== range.get('start')) {
             chunks.push(<span key={key++}>{origValue.substring(position, range.get('start'))}</span>);
           }
-          chunks.push(<span key={key++} className="result-highlight-colored">{origValue.substring(range.get('start'), range.get('start') + range.get('length'))}</span>);
+          chunks.push(
+            <ColoredHighlightResults key={key++}>
+              {origValue.substring(range.get('start'), range.get('start') + range.get('length'))}
+            </ColoredHighlightResults>,
+          );
           if ((idx + 1) < highlights.size) {
             const nextRange = highlights.get(idx + 1);
             chunks.push(<span key={key++}>{origValue.substring(range.get('start') + range.get('length'), nextRange.get('start'))}</span>);
@@ -159,7 +168,7 @@ class MessageTableEntry extends React.Component {
         <tr className="fields-row" onClick={this._toggleDetail}>
           <td><strong>
             <Timestamp dateTime={this.props.message.fields.timestamp} />
-          </strong>
+              </strong>
           </td>
           { this.props.selectedFields.toSeq().map(selectedFieldName => (
             <td key={selectedFieldName}>{this.renderForDisplay(selectedFieldName, true)}

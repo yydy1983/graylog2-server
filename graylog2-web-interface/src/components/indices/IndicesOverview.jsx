@@ -1,9 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Col, Row } from 'components/graylog';
+import styled from 'styled-components';
 import naturalSort from 'javascript-natural-sort';
 
+import { Col, Row } from 'components/graylog';
+
 import { ClosedIndexDetails, IndexDetails, IndexSummary } from 'components/indices';
+
+const IndexDescriptionRow = styled(Row)`
+  margin-bottom: 7px;
+`;
 
 class IndicesOverview extends React.Component {
   static propTypes = {
@@ -18,7 +24,7 @@ class IndicesOverview extends React.Component {
     const indexSummary = this.props.indices[indexName];
     const indexRange = indexSummary && indexSummary.range ? indexSummary.range : null;
     return (
-      <Row key={`index-summary-${indexName}`} className="content index-description">
+      <IndexDescriptionRow key={`index-summary-${indexName}`} className="content index-description">
         <Col md={12}>
           <IndexSummary index={index}
                         name={indexName}
@@ -34,7 +40,7 @@ class IndicesOverview extends React.Component {
             </span>
           </IndexSummary>
         </Col>
-      </Row>
+      </IndexDescriptionRow>
     );
   };
 

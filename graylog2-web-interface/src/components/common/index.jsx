@@ -43,6 +43,7 @@ export { default as SortableList } from './SortableList';
 export { default as SortableListItem } from './SortableListItem';
 export { SourceCodeEditor };
 export { default as Spinner } from './Spinner';
+export { default as SystemDefinitionList } from './SystemDefinitionList';
 export { default as TableList } from './TableList';
 export { default as Timestamp } from './Timestamp';
 export { default as TimezoneSelect } from './TimezoneSelect';

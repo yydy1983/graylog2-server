@@ -4,9 +4,9 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Reflux from 'reflux';
-import { Col, Row } from 'components/graylog';
 
-import { Spinner } from 'components/common';
+import { Col, Row } from 'components/graylog';
+import { Spinner, SystemDefinitionList } from 'components/common';
 import StoreProvider from 'injection/StoreProvider';
 import ActionsProvider from 'injection/ActionsProvider';
 import NumberUtils from 'util/NumberUtils';
@@ -59,12 +59,12 @@ const GraylogClusterOverview = createReactClass({
 
     if (!this._isClusterLoading()) {
       content = (
-        <dl className="system-dl" style={{ marginBottom: 0 }}>
+        <SystemDefinitionList>
           <dt>Cluster ID:</dt>
           <dd>{this.state.nodes.clusterId || 'Not available'}</dd>
           <dt>Number of nodes:</dt>
           <dd>{this.state.nodes.nodeCount}</dd>
-        </dl>
+        </SystemDefinitionList>
       );
     }
     let sumOutput = null;

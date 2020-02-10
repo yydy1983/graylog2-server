@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 import numeral from 'numeral';
 import moment from 'moment';
 import {} from 'moment-duration-format';
+import styled from 'styled-components';
 
 import { ProgressBar, Row, Col, Alert } from 'components/graylog';
 import MetricsExtractor from 'logic/metrics/MetricsExtractor';
@@ -22,6 +23,30 @@ import Routes from 'routing/Routes';
 const MetricsActions = ActionsProvider.getActions('Metrics');
 const MetricsStore = StoreProvider.getStore('Metrics');
 const JournalStore = StoreProvider.getStore('Journal');
+
+const SystemJournalList = styled.dl`
+  margin-top: 5px;
+  margin-bottom: 0px;
+
+  dt {
+    float: left;
+  }
+
+  dd {
+    margin-left: 120px;
+  }
+`;
+
+const JournalDetailsCol = styled(Col)`
+  .progress {
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+    .progress-bar {
+      min-width: 3em;
+    }
+  }
+`;
 
 const JournalDetails = createReactClass({
   displayName: 'JournalDetails',
@@ -111,7 +136,7 @@ const JournalDetails = createReactClass({
       <Row className="row-sm">
         <Col md={6}>
           <h3>Configuration</h3>
-          <dl className="system-journal">
+          <SystemJournalList>
             <dt>Path:</dt>
             <dd>{journalInformation.journal_config.directory}</dd>
             <dt>Earliest entry:</dt>
@@ -125,9 +150,9 @@ const JournalDetails = createReactClass({
               Every {numeral(journalInformation.journal_config.flush_interval).format('0,0')} messages
               {' '}or {moment.duration(journalInformation.journal_config.flush_age).format('h [hours] m [minutes] s [seconds]')}
             </dd>
-          </dl>
+          </SystemJournalList>
         </Col>
-        <Col md={6} className="journal-details-usage">
+        <JournalDetailsCol md={6}>
           <h3>Utilization</h3>
 
           <ProgressBar now={metrics.utilizationRatio * 100}
@@ -140,7 +165,7 @@ const JournalDetails = createReactClass({
           <strong>{numeral(metrics.append).format('0,0')} messages</strong>
           {' '}have been appended in the last second,{' '}
           <strong>{numeral(metrics.read).format('0,0')} messages</strong> have been read in the last second.
-        </Col>
+        </JournalDetailsCol>
       </Row>
     );
   },

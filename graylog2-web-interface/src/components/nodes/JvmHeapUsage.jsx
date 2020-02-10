@@ -2,19 +2,41 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
-import { ProgressBar } from 'components/graylog';
+import styled from 'styled-components';
 
+import { ProgressBar } from 'components/graylog';
 import { Spinner } from 'components/common';
 
 import NumberUtils from 'util/NumberUtils';
 import MetricsExtractor from 'logic/metrics/MetricsExtractor';
 
 import StoreProvider from 'injection/StoreProvider';
-
 import ActionsProvider from 'injection/ActionsProvider';
 
 const MetricsStore = StoreProvider.getStore('Metrics');
 const MetricsActions = ActionsProvider.getActions('Metrics');
+
+const NodeHeap = styled.div`
+  .progress {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  .used-memory {
+    background-color: #9e1f63;
+  }
+
+  .committed-memory {
+    background-color: #f7941e;
+  }
+
+  .max-memory {
+    background-color: #f5f5f5;
+  }
+`;
 
 const JvmHeapUsage = createReactClass({
   displayName: 'JvmHeapUsage',
@@ -88,11 +110,11 @@ const JvmHeapUsage = createReactClass({
     }
 
     return (
-      <div className="graylog-node-heap" data-node-id={this.props.nodeId}>
+      <NodeHeap data-node-id={this.props.nodeId}>
         {progressBar}
 
         {detail}
-      </div>
+      </NodeHeap>
     );
   },
 });

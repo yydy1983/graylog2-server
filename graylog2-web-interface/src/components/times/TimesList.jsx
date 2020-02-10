@@ -7,7 +7,7 @@ import DateTime from 'logic/datetimes/DateTime';
 
 import StoreProvider from 'injection/StoreProvider';
 
-import { Spinner, Timestamp } from 'components/common';
+import { Spinner, SystemDefinitionList, Timestamp } from 'components/common';
 
 const CurrentUserStore = StoreProvider.getStore('CurrentUser');
 const SystemStore = StoreProvider.getStore('System');
@@ -46,14 +46,14 @@ const TimesList = createReactClass({
             You can check timezone settings of specific graylog-server nodes on their respective detail page.
           </p>
 
-          <dl className="system-dl">
+          <SystemDefinitionList>
             <dt>User <em>{currentUser.username}</em>:</dt>
             <dd><Timestamp dateTime={time} format={timeFormat} /></dd>
             <dt>Your web browser:</dt>
             <dd><Timestamp dateTime={time} format={timeFormat} tz="browser" /></dd>
             <dt>Graylog server:</dt>
             <dd><Timestamp dateTime={time} format={timeFormat} tz={serverTimezone} /></dd>
-          </dl>
+          </SystemDefinitionList>
         </Col>
       </Row>
     );

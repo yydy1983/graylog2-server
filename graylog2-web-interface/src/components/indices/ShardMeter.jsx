@@ -2,6 +2,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import numeral from 'numeral';
 import moment from 'moment';
+import styled from 'styled-components';
+
+const ShardMeterList = styled.dl`
+  margin-bottom: 0px;
+  margin-top: 0px;
+`;
+
+const SharedMeterTerm = styled.dt`
+  float: left;
+`;
+
+const SharedMeterData = styled.dd`
+  margin-left: 65px;
+`;
 
 class ShardMeter extends React.Component {
   static propTypes = {
@@ -24,28 +38,28 @@ class ShardMeter extends React.Component {
     return (
       <span>
         <h3 style={{ display: 'inline' }}>{this.props.title}</h3>
-        <dl>
-          <dt>Index:</dt>
-          <dd>{this._formatMeter(sm.index)}</dd>
+        <ShardMeterList>
+          <SharedMeterTerm>Index:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.index)}</SharedMeterData>
 
-          <dt>Flush:</dt>
-          <dd>{this._formatMeter(sm.flush)}</dd>
+          <SharedMeterTerm>Flush:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.flush)}</SharedMeterData>
 
-          <dt>Merge:</dt>
-          <dd>{this._formatMeter(sm.merge)}</dd>
+          <SharedMeterTerm>Merge:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.merge)}</SharedMeterData>
 
-          <dt>Query:</dt>
-          <dd>{this._formatMeter(sm.search_query)}</dd>
+          <SharedMeterTerm>Query:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.search_query)}</SharedMeterData>
 
-          <dt>Fetch:</dt>
-          <dd>{this._formatMeter(sm.search_fetch)}</dd>
+          <SharedMeterTerm>Fetch:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.search_fetch)}</SharedMeterData>
 
-          <dt>Get:</dt>
-          <dd>{this._formatMeter(sm.get)}</dd>
+          <SharedMeterTerm>Get:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.get)}</SharedMeterData>
 
-          <dt>Refresh:</dt>
-          <dd>{this._formatMeter(sm.refresh)}</dd>
-        </dl>
+          <SharedMeterTerm>Refresh:</SharedMeterTerm>
+          <SharedMeterData>{this._formatMeter(sm.refresh)}</SharedMeterData>
+        </ShardMeterList>
       </span>
     );
   }

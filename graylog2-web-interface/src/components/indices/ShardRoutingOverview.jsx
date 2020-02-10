@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
 import { ShardRouting } from 'components/indices';
 import naturalSort from 'javascript-natural-sort';
+
+const ShardDescription = styled.div`
+  font-size: 11px;
+  margin-top: 2px;
+  margin-left: 6px;
+`;
 
 class ShardRoutingOverview extends React.Component {
   static propTypes = {
@@ -24,11 +31,11 @@ class ShardRoutingOverview extends React.Component {
 
         <br style={{ clear: 'both' }} />
 
-        <div className="description">
+        <ShardDescription>
           Bold shards are primaries, others are replicas. Replicas are elected to primaries automatically
           when primaries leave the cluster. Size and document counts only reflect primary shards and no
           possible replica duplication.
-        </div>
+        </ShardDescription>
       </div>
     );
   }

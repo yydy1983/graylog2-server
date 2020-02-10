@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
 import { Col, Row, Button } from 'components/graylog';
 import { Spinner } from 'components/common';
@@ -12,6 +13,10 @@ import { IndexRangeSummary, ShardMeter, ShardRoutingOverview } from 'components/
 const IndicesActions = ActionsProvider.getActions('Indices');
 const IndexRangesActions = ActionsProvider.getActions('IndexRanges');
 StoreProvider.getStore('IndexRanges');
+
+const ShardMetersCol = styled(Col)`
+  margin-top: 10px;
+`;
 
 class IndexDetails extends React.Component {
   static propTypes = {
@@ -87,12 +92,12 @@ class IndexDetails extends React.Component {
         {index.all_shards.documents.deleted} deleted messages
 
         <Row style={{ marginBottom: '10' }}>
-          <Col md={4} className="shard-meters">
+          <ShardMetersCol md={4}>
             <ShardMeter title="Primary shard operations" shardMeter={index.primary_shards} />
-          </Col>
-          <Col md={4} className="shard-meters">
+          </ShardMetersCol>
+          <ShardMetersCol md={4}>
             <ShardMeter title="Total shard operations" shardMeter={index.all_shards} />
-          </Col>
+          </ShardMetersCol>
         </Row>
 
         <ShardRoutingOverview routing={index.routing} indexName={indexName} />

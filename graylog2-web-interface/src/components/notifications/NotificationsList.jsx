@@ -1,6 +1,7 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
 import Reflux from 'reflux';
+import styled from 'styled-components';
 
 import StoreProvider from 'injection/StoreProvider';
 
@@ -9,6 +10,10 @@ import { Icon, Spinner } from 'components/common';
 import Notification from 'components/notifications/Notification';
 
 const NotificationsStore = StoreProvider.getStore('Notifications');
+
+const StyledAlert = styled(Alert)`
+  margin-top: 10px;
+`;
 
 const NotificationsList = createReactClass({
   displayName: 'NotificationsList',
@@ -38,10 +43,10 @@ const NotificationsList = createReactClass({
     if (count === 0) {
       title = 'No notifications';
       content = (
-        <Alert bsStyle="success" className="notifications-none">
+        <StyledAlert bsStyle="success">
           <Icon name="check-circle" />{' '}
           &nbsp;No notifications
-        </Alert>
+        </StyledAlert>
       );
     } else {
       title = `There ${this._formatNotificationCount(count)}`;

@@ -91,17 +91,8 @@ const globalStyles = css`
     margin-left: 5px;
   }
 
-  .input-group-addon.input-group-separator {
-    border-right-width: 0;
-    border-left-width: 0;
-  }
-
   .btn:focus {
     background-position: 0;
-  }
-
-  .navbar-brand {
-    padding: 12px 15px 0 15px;
   }
 
   .content {
@@ -118,12 +109,6 @@ const globalStyles = css`
     p.description {
       margin-top: 3px;
       color: #939393;
-    }
-
-    p.description-tooltips-small .fa-stack {
-      margin-right: 1px;
-      position: relative;
-      top: -1px;
     }
   }
 
@@ -157,10 +142,6 @@ const globalStyles = css`
     margin-bottom: 0px;
   }
 
-  .notifications-none {
-    margin-top: 10px;
-  }
-
   .row {
     margin-bottom: 15px;
   }
@@ -174,47 +155,12 @@ const globalStyles = css`
     margin-top: 5px;
   }
 
-  .xtrc-new-example {
-    margin-bottom: 5px;
-    font-family: monospace;
-    font-size: 14px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .xtrc-no-example {
-    margin-top: 15px;
-    margin-bottom: 12px;
-  }
-
-  .xtrc-hl {
-    background-color: #f8b9b7;
-    padding-top: 3px;
-    padding-bottom: 3px;
-  }
-
   #create-extractor {
     margin-top: 10px;
   }
 
   .xtrc-converter-subfields {
     margin-left: 20px;
-  }
-
-  .xtrc-list-container {
-    margin-top: 15px;
-  }
-
-  .xtrc-list-container h2 {
-    margin-bottom: 5px;
-  }
-
-  .xtrc-list-container .alert {
-    margin-top: 5px;
-  }
-
-  .xtrc-list-drag {
-    margin-top: 10px;
   }
 
   .u-light {
@@ -246,36 +192,9 @@ const globalStyles = css`
     font-weight: bold;
   }
 
-  .master-node {
-    color: #f89406;
-  }
-
-  .loglevel-metrics-row {
-    margin-top: 2px;
-    margin-left: 10px;
-  }
-
-  .loglevel-metrics dl {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  .loglevel-metrics dt {
-    float: left;
-    margin-right: 5px;
-  }
-
   .subsystems {
     margin-top: 10px;
     margin-left: 10px;
-  }
-
-  .subsystems-row {
-    margin-bottom: 10px;
-  }
-
-  .metrics-filter {
-    margin-bottom: 15px !important;
   }
 
   dl.metric-def dt {
@@ -300,10 +219,6 @@ const globalStyles = css`
 
   dl.metric-histogram dd {
     margin-left: 125px;
-  }
-
-  #user-list th.user-type {
-    width: 50px;
   }
 
   td.centered {
@@ -356,18 +271,6 @@ const globalStyles = css`
 
   .dashboard .widget .controls {
     display: none;
-  }
-
-  .tooltip .tooltip-inner {
-    max-width: 300px;
-  }
-
-  .tooltip .tooltip-inner .datapoint-info {
-    text-align: left;
-  }
-
-  .tooltip .tooltip-inner .datapoint-info .date {
-    color: #E3E5E5;
   }
 
   .dashboard .widget .dc-chart {
@@ -438,13 +341,16 @@ const globalStyles = css`
     vertical-align: middle;
   }
 
-  .configuration-field-optional {
-    margin-left: 5px;
-    font-size: 11px;
+  .tooltip .tooltip-inner {
+    max-width: 300px;
   }
 
-  .index-description {
-    margin-bottom: 7px;
+  .tooltip .tooltip-inner .datapoint-info {
+    text-align: left;
+  }
+
+  .tooltip .tooltip-inner .datapoint-info .date {
+    color: #E3E5E5;
   }
 
   .index-description .index-info {
@@ -468,118 +374,19 @@ const globalStyles = css`
     margin-left: 5px;
   }
 
-  .shard-meters {
-    margin-top: 10px;
-  }
-
-  .shard-meters dl {
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .shard-meters dl dt {
-    float: left;
-  }
-
-  .shard-meters dl dd {
-    margin-left: 65px;
-  }
-
   .shards {
     margin: 0;
     padding: 0;
     margin-top: 5px;
   }
 
-  .shard-routing .shards .shard {
-    padding: 10px;
-    margin: 5px;
-    width: 50px;
-    float: left;
-    text-align: center;
-  }
-
-  .shard-routing .shards .shard-started {
-    background-color: #dff0d8;
-  }
-
-  .shard-routing .shards .shard-relocating {
-    background-color: #de9df4;
-  }
-
-  .shard-routing .shards .shard-initializing {
-    background-color: #f4ddbc;
-  }
-
-  .shard-routing .shards .shard-unassigned {
-    background-color: #c3c3c3;
-  }
-
-  .shard-routing .shards .shard-primary .id {
-    font-weight: bold;
-    margin-bottom: 3px;
-    border-bottom: 1px solid #000;
-  }
-
-  .shard-routing .description {
-    font-size: 11px;
-    margin-top: 2px;
-    margin-left: 6px;
-  }
-
-  .node-buffer-usage {
-    margin-top: 10px;
-    margin-bottom: 7px;
-  }
-
-  .node-buffer-usage .progress-bar, .journal-details-usage .progress-bar {
+  .node-buffer-usage .progress-bar,
+  .journal-details-usage .progress-bar {
     text-shadow: 0 1px 2px rgba(0,0,0,0.4), 2px -1px 3px rgba(255,255,255,0.5);
 
     span {
       margin-left: 1px;
     }
-  }
-
-  .system-system dt {
-    float: left;
-  }
-
-  .system-system dd {
-    margin-left: 75px;
-  }
-
-  dl.system-journal {
-    margin-top: 5px;
-    margin-bottom: 0px;
-  }
-
-  .system-journal dt {
-    float: left;
-  }
-
-  .system-journal dd {
-    margin-left: 120px;
-  }
-
-  dl.system-dl {
-    margin: 0;
-  }
-
-  .system-dl dt {
-    float: left;
-    clear: left;
-  }
-
-  .system-dl dd {
-    margin-left: 180px;
-  }
-
-  .system-rest dt {
-    float: left;
-  }
-
-  .system-rest dd {
-    margin-left: 120px;
   }
 
   .search-help {
@@ -607,23 +414,6 @@ const globalStyles = css`
 
   .alerts th a:focus {
     color: #fff;
-  }
-
-  .alert-condition .in-grace {
-    color: #8c8e86;
-  }
-
-  .alert-conditions hr {
-    margin-top: 7px;
-    margin-bottom: 7px;
-  }
-
-  .result-highlight-colored {
-    background-color: #ffec3d;
-  }
-
-  .node-state {
-    cursor: help
   }
 
   .annotation .content {
@@ -834,14 +624,6 @@ const globalStyles = css`
     margin-right: 0;
   }
 
-  ul.streams li.stream .stream-description {
-    margin-bottom: 3px;
-  }
-
-  ul.streams li.stream .streamrules-details {
-    margin-top: 15px;
-  }
-
   ul.entity-list {
     padding: 0;
     margin: 0;
@@ -876,36 +658,6 @@ const globalStyles = css`
     margin-bottom: 10px !important;
     margin-left: -15px;
     margin-right: -15px;
-  }
-
-  .graylog-node {
-    margin-top: 15px;
-  }
-
-  .graylog-node-title {
-    margin-top: 8px;
-  }
-
-  dl.graylog-node-state {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  dl.graylog-node-state dt {
-    float: left;
-  }
-
-  dl.graylog-node-state dd {
-    margin-left: 180px;
-  }
-
-  .graylog-node .graylog-node-heap {
-    margin-top: 10px;
-  }
-
-  .graylog-node .graylog-node-heap .progress {
-    height: 25px;
-    margin-bottom: 5px;
   }
 
   span.blob {
@@ -963,73 +715,16 @@ const globalStyles = css`
     overflow: auto;
   }
 
-  nav.navbar-fixed-top ul.dropdown-menu li a {
-    font-size: 12px;
-  }
-
-  nav.navbar-fixed-top ul.dropdown-menu {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  nav.navbar-fixed-top ul.dropdown-menu li {
-    padding: 2px 2px 2px 0;
-  }
-
-  nav.navbar-fixed-top ul.dropdown-menu li.divider {
-    padding: 0;
-  }
-
   div.row-sm {
     margin-bottom: 5px;
   }
 
-  .graylog-node-heap .progress,
-  .node-buffer-usage .progress,
-  .journal-details-usage .progress {
+  .node-buffer-usage .progress {
     margin-bottom: 5px;
-  }
-
-  .journal-details-usage .progress {
-    margin-top: 10px;
-  }
-
-  .journal-details-usage .progress .progress-bar {
-    min-width: 3em;
   }
 
   .progress-bar {
     max-width: 100%;
-  }
-
-  .graylog-node-heap p {
-    margin-bottom: 0px;
-  }
-
-  .graylog-node-heap .used-memory {
-    background-color: #9e1f63;
-  }
-
-  .graylog-node-heap .committed-memory {
-    background-color: #f7941e;
-  }
-
-  .graylog-node-heap .max-memory {
-    background-color: #f5f5f5;
-  }
-
-  dl.system-system, dl.system-rest {
-    margin-top: 5px;
-    margin-bottom: 0px;
-  }
-
-  .table-sm {
-    margin-bottom: 0px;
-  }
-
-  .graylog-input {
-    margin-top: 15px;
-    border-bottom: 1px
   }
 
   .graylog-input-metrics {
@@ -1061,11 +756,6 @@ const globalStyles = css`
     border-bottom: 1px solid #ececec;
   }
 
-  /* // Ensure that the stream start/pause buttons have the same size. */
-  .toggle-stream-button {
-    width: 8.5em;
-  }
-
   .threaddump {
     font-size: 11px;
   }
@@ -1095,10 +785,6 @@ const globalStyles = css`
 
   .save-button-margin {
     margin-right: 5px;
-  }
-
-  .form-control.message-id-input {
-    width: 300px;
   }
 
   .dropdown-header {
